@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#142b25"><title>群侠录 · 杭州 P7 车友会</title><style>:root {
+  --site-forest: #142b25;
+  --site-ink: #243b32;
+  --site-moon: #eeeddb;
+  --site-soft: #b5c1ad;
+  --site-accent: #ab3c30;
+  --site-surface: #f4f6f3;
+  --site-raised: #e6ece5;
+  --site-line: rgba(36,59,50,.16);
+  --site-line-dark: rgba(238,237,219,.2);
+  --site-focus: #c48c43;
+  --site-ui: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --site-serif: "Songti SC", "STSong", "SimSun", serif;
+  --site-nav-h: 72px;
+}
+*,*::before,*::after { box-sizing: border-box; }
+html,body { overflow-x: clip; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--site-nav-h) + 25px); }
+body { margin: 0; }
+a { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, .scroll:focus-visible { outline: 2px solid var(--site-focus); outline-offset: 5px; }
+.skip-link { position: fixed; top: 8px; left: 12px; transform: translateY(-160%); background: var(--site-moon); color: var(--site-forest); padding: 12px 18px; z-index: 99; font: 14px var(--site-ui); }
+.skip-link:focus { transform: translateY(0); }
+.community-nav { position: sticky; top: 0; z-index: 40; height: var(--site-nav-h); color: var(--site-moon); background: var(--site-forest); border-bottom: 1px solid var(--site-line-dark); font-family: var(--site-ui); }
+.community-nav-inner { max-width: 1150px; height: 100%; margin: auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.community-brand { display: flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; min-height: 44px; white-space: nowrap; }
+.community-symbol { display: grid; place-items: center; border: 1px solid var(--site-soft); width: 35px; height: 35px; font: 17px Georgia,serif; }
+.community-brand > span:last-child { font-size: 15px; font-weight: 500; letter-spacing: 1px; }
+.community-brand small { display: block; font-size: 9px; font-weight: 400; color: var(--site-soft); margin-top: 2px; letter-spacing: 1px; }
+.community-nav nav { display: flex; gap: 27px; align-items: center; }
+.community-nav nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 0; color: var(--site-soft); font-size: 12px; letter-spacing: 1px; text-decoration: none; white-space: nowrap; position: relative; }
+.community-nav nav a[aria-current="page"], .community-nav nav a:hover { color: var(--site-moon); }
+.community-nav nav a[aria-current="page"]::after { content: ""; position: absolute; bottom: 5px; left: 0; right: 0; height: 1px; background: currentColor; }
+.report-header { padding: 48px 0 33px; background: var(--site-surface); margin-bottom: 25px; }
+.report-header h1 { font-size: clamp(25px, 4vw, 37px); line-height: 1.4; letter-spacing: -1px; margin-bottom: 18px; }
+.report-header .meta { line-height: 2; }
+.report-content { padding-bottom: 70px; }
+.report-toc { border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: center; gap: 0 18px; padding: 4px 0 18px; margin-bottom: 26px; font-size: 12px; }
+.report-toc > span { color: var(--dim); margin-right: 5px; }
+.report-toc a { color: var(--site-ink); display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; white-space: nowrap; }
+.report-toc a:hover { color: var(--site-accent); text-decoration: underline; text-underline-offset: 5px; }
+.attachment-notice { font-size: 12px; color: var(--dim); line-height: 1.8; margin: 0 0 14px; padding: 12px 15px; border: 1px solid var(--line); border-radius: 6px; }
+.source-unavailable { min-height: 105px; padding: 25px 18px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 7px; background: var(--bg); border: 1px dashed var(--line); border-radius: 6px; color: var(--dim); text-align: center; }
+.source-unavailable > span { font-size: 14px; }
+.source-unavailable > small { font-size: 12px; }
+.grid2 { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+.grid2 > * { min-width: 0; }
+.scroll { max-width: 100%; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; }
+.formula { white-space: nowrap; }
+h1,h2,h3 { overflow-wrap: anywhere; min-width: 0; }
+.related-link { display: inline-flex; align-items: center; gap: 18px; color: var(--site-ink); font-size: 14px; min-height: 44px; margin-bottom: 13px; text-decoration: none; }
+.related-link:hover { text-decoration: underline; text-underline-offset: 5px; }
+.stories-page { background: var(--site-surface); color: var(--site-ink); font-family: var(--site-ui); }
+.stories-main { max-width: 1020px; margin: auto; padding: 35px 30px 70px; }
+.breadcrumbs { display: flex; align-items: center; gap: 14px; font-size: 11px; color: var(--site-ink); }
+.breadcrumbs a { color: inherit; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+.stories-heading { background: none; border: 0; padding: 28px 0 45px; margin: 0; }
+.stories-heading h1 { font: 500 clamp(38px,5.7vw,64px)/1.5 var(--site-serif); margin: 0 0 18px; letter-spacing: 1px; }
+.stories-heading p { color: var(--site-ink); opacity: .75; font-size: 12px; letter-spacing: 1px; margin: 0; }
+.story-entry { display: grid; grid-template-columns: minmax(0,1.5fr) minmax(0,1fr); background: var(--site-forest); color: var(--site-moon); text-decoration: none; border: 1px solid var(--site-line-dark); }
+.entry-content { padding: 44px 48px; }
+.story-volume { color: var(--site-soft); font-size: 11px; letter-spacing: 2px; }
+.entry-content h2 { font: 500 clamp(30px,4vw,43px)/1.5 var(--site-serif); margin: 16px 0; padding: 0; border: none; letter-spacing: 2px; }
+.entry-content p { margin: 0; font: 16px/1.8 var(--site-serif); color: var(--site-soft); }
+.story-read { display: flex; align-items: center; gap: 24px; width: fit-content; margin-top: 45px; padding-bottom: 9px; border-bottom: 1px solid var(--site-soft); font-size: 12px; }
+.entry-portrait { display: flex; align-items: center; justify-content: center; gap: 20px; min-width: 0; border-left: 1px solid var(--site-line-dark); }
+.entry-portrait > span:first-child { font: 400 clamp(110px,16vw,180px)/1.1 var(--site-serif); }
+.portrait-caption { color: var(--site-soft); writing-mode: vertical-rl; font: 12px/2 var(--site-serif); letter-spacing: 3px; }
+.return-report { display: inline-flex; align-items: center; min-height: 44px; color: var(--site-ink); font-size: 12px; margin-top: 29px; text-decoration: underline; text-underline-offset: 6px; }
+.stories-footer { max-width: 960px; margin: 0 auto; border-top: 1px solid var(--site-line); padding: 25px 0 40px; font: 11px var(--site-ui); color: var(--site-ink); }
+@media(max-width:760px) {
+  .grid2 { grid-template-columns: minmax(0,1fr); }
+  .report-header { padding-top: 32px; }
+  .report-toc { gap: 0 18px; }
+  .stories-main { padding-top: 25px; }
+  .entry-content { padding: 32px; }
+  .entry-portrait { gap: 12px; }
+  .stories-footer { margin-inline: 30px; }
+}
+@media(max-width:560px) {
+  :root { --site-nav-h: 66px; }
+  .community-nav-inner { padding-inline: 20px; gap: 10px; }
+  .community-brand { gap: 8px; }
+  .community-brand > span:last-child { font-size: 12px; letter-spacing: 0; }
+  .community-brand small { font-size: 8px; }
+  .community-symbol { width: 29px; height: 31px; font-size: 15px; }
+  .community-nav nav { gap: 16px; }
+  .community-nav nav a { font-size: 11px; letter-spacing: 0; }
+  .wrap { padding-inline: 20px; }
+  .report-header h1 { font-size: 27px; letter-spacing: -.5px; }
+  .report-header .meta { font-size: 11px; }
+  .report-header .tag { font-size: 10px; }
+  .report-toc { gap: 0 17px; font-size: 11px; padding-bottom: 10px; }
+  .report-toc > span { width: 100%; margin-bottom: 1px; }
+  .report-content h2 { font-size: 18px; line-height: 1.6; }
+  .report-content h3 { font-size: 15px; }
+  .card { padding: 16px; }
+  .note,.key { padding: 12px 14px; }
+  .scroll table { min-width: 560px; }
+  .stories-main { padding-inline: 20px; padding-bottom: 45px; }
+  .stories-heading { padding-top: 23px; padding-bottom: 32px; }
+  .stories-heading h1 { font-size: 38px; }
+  .stories-heading p { font-size: 10px; }
+  .story-entry { grid-template-columns: minmax(0,1fr); }
+  .entry-content { padding: 30px; }
+  .entry-content h2 { font-size: 33px; }
+  .entry-content p { font-size: 15px; }
+  .story-read { margin-top: 28px; }
+  .entry-portrait { min-height: 190px; border-left: 0; border-top: 1px solid var(--site-line-dark); }
+  .entry-portrait > span:first-child { font-size: 120px; }
+  .stories-footer { margin-inline: 20px; line-height: 1.8; }
+}
+@media(max-width:360px) {
+  .community-nav-inner { padding-inline: 16px; }
+  .community-brand small { font-size: 7px; }
+  .community-nav nav { gap: 13px; }
+  .community-brand > span:last-child { font-size: 11px; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } }
+@media print { .community-nav,.report-toc,.skip-link,.related-link,.attachment-notice { display:none; } .wrap { max-width:none; padding:0; } .scroll { overflow:visible; } .report-header { padding:0 0 20px; } }
+</style></head><body class="stories-page"><a class="skip-link" href="#stories-main">跳至群侠录</a><div class="community-nav"><div class="community-nav-inner">
+      <a class="community-brand" href="../"><span class="community-symbol" aria-hidden="true">P7</span><span>杭州 P7 车友会<small>车友资料与群中故事</small></span></a>
+      <nav aria-label="网站导航"><a href="../" >保险调研</a><a href="./" aria-current="page">群侠录</a></nav>
+    </div></div>
+      <main id="stories-main" class="stories-main"><nav class="breadcrumbs" aria-label="当前位置"><a href="../">首页</a><span aria-hidden="true">/</span><span aria-current="page">群侠录</span></nav>
+      <header class="stories-heading"><h1>群中有人，<br>江湖有故事。</h1><p>杭州 THE NEXT P7 车友会 · 群侠录</p></header>
+      <a class="story-entry" href="madexuan/"><div class="entry-content"><span class="story-volume">群侠录之一</span><h2>马德轩小传</h2><p>外贫而内直，好争而不记仇。</p><span class="story-read">阅读小传 <span aria-hidden="true">↗</span></span></div><div class="entry-portrait" aria-hidden="true"><span>马</span><span class="portrait-caption">千里单骑<br>滇西三载</span></div></a>
+      <a class="return-report" href="../">返回保险调研报告</a></main><footer class="stories-footer">杭州 P7 车友会 · 群友资料与故事</footer></body></html>

@@ -1,742 +1,603 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#142b25">
-  <meta name="description" content="马德轩小传 · 杭州 THE NEXT P7 车友会群侠录之一。据群聊实录整理，仅供群友娱乐。">
-  <title>马德轩小传 · 杭州群侠录</title>
-  <style>/* finesse · register=brand · A=ink-green+vermilion · B=Songti-display/system-ui · C=longform-with-sticky-index
- * D=CSS-layered-landscape · E=landscape-scroll · SOUL=9 SPECTACLE=6 DENSITY=6 */
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#142b25"><title>全新小鹏P7 车友会保险调研报告</title><style>
+  :root{
+    --bg:#f5f6f8; --card:#fff; --line:#e3e6eb; --txt:#1c2230; --dim:#6b7280;
+    --red:#c0392b; --blue:#1f5fa8; --green:#1f8a54; --amber:#b7791f;
+    --shadow:0 1px 2px rgba(16,24,40,.06),0 8px 24px rgba(16,24,40,.05);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);
+    font:15px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;}
+  .wrap{max-width:980px;margin:0 auto;padding:0 22px 90px}
+  header{background:#fff;border-bottom:1px solid var(--line);padding:34px 0 26px;margin-bottom:26px}
+  header .wrap{padding-bottom:0}
+  h1{margin:0 0 8px;font-size:25px;font-weight:700;letter-spacing:.3px}
+  .meta{color:var(--dim);font-size:13px}
+  .tag{display:inline-block;background:#eef2f7;color:var(--blue);border-radius:5px;
+    padding:1px 8px;font-size:12px;margin-right:6px}
+  h2{font-size:18px;margin:38px 0 12px;padding-left:11px;border-left:4px solid var(--red)}
+  h3{font-size:15.5px;margin:24px 0 8px;color:#243044}
+  p{margin:10px 0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:11px;
+    padding:18px 20px;margin:14px 0;box-shadow:var(--shadow)}
+  .note{background:#fffaf0;border:1px solid #f2e2c4;border-left:4px solid var(--amber);
+    border-radius:8px;padding:12px 16px;margin:14px 0;font-size:14px}
+  .key{background:#f2f8f4;border:1px solid #cfe8da;border-left:4px solid var(--green);
+    border-radius:8px;padding:12px 16px;margin:14px 0;font-size:14px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px;background:#fff}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#f0f3f7;font-weight:600;white-space:nowrap}
+  td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  tr:nth-child(even) td{background:#fafbfc}
+  .hi{color:var(--red);font-weight:600}
+  .lo{color:var(--green);font-weight:600}
+  .scroll{overflow-x:auto}
+  figure{margin:18px 0;background:#fff;border:1px solid var(--line);border-radius:11px;
+    padding:12px;box-shadow:var(--shadow)}
+  figure img{width:100%;display:block;border-radius:6px}
+  figcaption{color:var(--dim);font-size:12.5px;margin-top:9px;text-align:center}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:760px){.grid2{grid-template-columns:1fr}}
+  ul,ol{margin:8px 0 8px 22px;padding:0}
+  li{margin:4px 0}
+  .src{color:var(--dim);font-size:12.5px}
+  footer{color:var(--dim);font-size:12.5px;border-top:1px solid var(--line);
+    margin-top:40px;padding-top:16px}
+  .formula{background:#1c2230;color:#e8edf5;border-radius:9px;padding:14px 18px;
+    font-family:ui-monospace,Consolas,monospace;font-size:13.5px;overflow-x:auto}
+
 :root {
-  --forest: #142b25; /* 墨绿 (#142b25) — cover and footer ground. */
-  --forest-deep: #10231e;
-  --forest-light: #24473a;
-  --sheet: #f0f1e9; /* 玉白 (#f0f1e9) — reading surface. */
-  --sheet-raised: #e6e9dd;
-  --ink: #23382e; /* 松墨 (#23382e) — primary reading text. */
-  --muted: #5a6a5b;
-  --moon: #eeeddb; /* 月白 (#eeeddb) — on-forest text. */
-  --moon-muted: #b5c1ad;
-  --accent: #ab3c30; /* 朱砂 (#ab3c30) — the single signal accent. */
-  --accent-light: #d88470;
-  --line: rgba(35, 56, 46, .18);
-  --line-dark: rgba(238, 237, 219, .2);
-  --clear: transparent;
-  --shadow: rgba(12, 37, 28, .16);
-  --scrim: rgba(16, 35, 30, .7);
-  --vignette: rgba(16, 35, 30, .45);
-  --focus: #bd623c;
-  --font-display: "Songti SC", "STSong", "Noto Serif CJK SC", "SimSun", serif;
-  --font-body: "Songti SC", "STSong", "Noto Serif CJK SC", "SimSun", serif;
-  --font-ui: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
-  --font-latin: "Baskerville", "Georgia", serif;
-  --art-tone-01: #102b24;
-  --art-tone-02: #112d24;
-  --art-tone-03: #193c31;
-  --art-tone-04: #214b3d;
-  --art-tone-05: #234338;
-  --art-tone-06: #234c40;
-  --art-tone-07: #465b45;
-  --art-tone-08: #4e7767;
-  --art-tone-09: #557c64;
-  --art-tone-10: #5a725d;
-  --art-tone-11: #688974;
-  --art-tone-12: #739273;
-  --art-tone-13: #879e84;
-  --art-tone-14: #9aac87;
-  --art-tone-15: #9eb49a;
-  --art-tone-16: #a6b9a4;
-  --art-tone-17: #bac7a9;
-  --art-tone-18: #bfc6aa;
-  --art-tone-19: #c2ccb2;
-  --art-tone-20: #cbd5b4;
-  --art-tone-21: #d0d8b8;
-  --art-tone-22: #d8ddbe;
-  --art-tone-23: #dbe1bd;
-  --art-tone-24: #e8e3c8;
-  --art-tone-25: #e8e3ca;
-  --art-tone-26: #ece8cb;
-  --art-tone-27: #edf0d2;
-  --art-tone-28: #eff0d6;
-  --nav-h: 80px;
-  --z-nav: 30;
-  --z-sticky: 10;
-  --ease: cubic-bezier(.16, 1, .3, 1);
+  --site-forest: #142b25;
+  --site-ink: #243b32;
+  --site-moon: #eeeddb;
+  --site-soft: #b5c1ad;
+  --site-accent: #ab3c30;
+  --site-surface: #f4f6f3;
+  --site-raised: #e6ece5;
+  --site-line: rgba(36,59,50,.16);
+  --site-line-dark: rgba(238,237,219,.2);
+  --site-focus: #c48c43;
+  --site-ui: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --site-serif: "Songti SC", "STSong", "SimSun", serif;
+  --site-nav-h: 72px;
 }
-*, *::before, *::after { box-sizing: border-box; }
-html, body { overflow-x: clip; }
-html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 24px); }
-body { margin: 0; background: var(--sheet); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
-body::before { content: ""; position: fixed; inset: 0; z-index: 70; pointer-events: none; opacity: .03; background-size: 170px 170px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E"); }
-a { color: inherit; text-decoration: none; }
-button { color: inherit; font: inherit; cursor: pointer; }
-a, button { -webkit-tap-highlight-color: var(--clear); }
-button, nav a, .read-button { white-space: nowrap; }
-button:active, .read-button:active { transform: translateY(1px); }
-:focus-visible { outline: 2px solid var(--focus); outline-offset: 5px; }
-::selection { background: var(--forest-light); color: var(--moon); }
-[hidden] { display: none !important; }
-h1, h2, h3 { min-width: 0; overflow-wrap: anywhere; }
-button { border-radius: 0; }
-.skip-link { position: fixed; z-index: 100; top: 12px; left: 12px; padding: 12px 20px; background: var(--sheet); transform: translateY(-170%); font-family: var(--font-ui); }
+*,*::before,*::after { box-sizing: border-box; }
+html,body { overflow-x: clip; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--site-nav-h) + 25px); }
+body { margin: 0; }
+a { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, .scroll:focus-visible { outline: 2px solid var(--site-focus); outline-offset: 5px; }
+.skip-link { position: fixed; top: 8px; left: 12px; transform: translateY(-160%); background: var(--site-moon); color: var(--site-forest); padding: 12px 18px; z-index: 99; font: 14px var(--site-ui); }
 .skip-link:focus { transform: translateY(0); }
-.reading-progress { position: fixed; top: 0; inset-inline: 0; height: 3px; z-index: 80; pointer-events: none; }
-#progress-fill { height: 100%; background: var(--accent); transform: scaleX(0); transform-origin: left; }
-.site-header { height: var(--nav-h); position: sticky; top: 0; z-index: var(--z-nav); display: flex; align-items: center; justify-content: space-between; padding: 0 max(5vw, calc((100vw - 1280px)/2)); background: var(--forest); color: var(--moon); border-bottom: 1px solid var(--line-dark); font-family: var(--font-ui); }
-.brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; min-height: 44px; }
-.brand-seal { width: 33px; height: 35px; display: grid; place-items: center; font-family: var(--font-display); font-size: 23px; border: 1px solid var(--moon-muted); }
-.brand > span:last-child { font-size: 16px; font-weight: 600; letter-spacing: 3px; }
-.brand small { display: block; font-size: 8px; font-weight: 400; letter-spacing: 2px; margin-top: 4px; }
-.site-header nav { display: flex; align-items: center; gap: 33px; font-size: 12px; letter-spacing: 2px; }
-.site-header nav > a { padding: 14px 0; border-bottom: 1px solid var(--clear); }
-.site-header nav > a:hover { border-color: var(--moon-muted); }
-.menu-toggle { border: 0; background: var(--clear); display: flex; align-items: center; gap: 14px; padding: 12px 0 12px 12px; min-height: 44px; }
-.menu-icon { display: flex; flex-direction: column; width: 20px; gap: 5px; }
-.menu-icon i { height: 1px; background: var(--moon); width: 20px; transition: transform .3s var(--ease); }
-.menu-toggle[aria-expanded="true"] .menu-icon i:first-child { transform: translateY(3px) rotate(45deg); }
-.menu-toggle[aria-expanded="true"] .menu-icon i:last-child { transform: translateY(-3px) rotate(-45deg); }
-.menu-scrim { position: fixed; inset: var(--nav-h) 0 0; z-index: 39; background: var(--scrim); }
-.chapter-menu { position: fixed; right: 0; top: var(--nav-h); bottom: 0; width: min(450px, 100%); z-index: 40; background: var(--sheet); padding: 28px 36px; overflow-y: auto; box-shadow: -15px 0 60px var(--shadow); }
-.menu-top { display: flex; justify-content: space-between; align-items: center; font: 12px var(--font-ui); color: var(--muted); border-bottom: 1px solid var(--line); padding-bottom: 15px; }
-.menu-top button { background: var(--clear); border: 1px solid var(--line); width: 44px; height: 44px; font-size: 27px; }
-.menu-links a { display: flex; align-items: center; gap: 18px; min-height: 55px; border-bottom: 1px solid var(--line); font-size: 22px; }
-.menu-links a > span:first-child { font-size: 12px; color: var(--accent); }
-.menu-links .toc-arrow { margin-left: auto; font-size: 19px; }
-.chapter-menu > p { font-size: 14px; color: var(--muted); margin-top: 24px; }
-.cover { color: var(--moon); background: var(--forest); position: relative; isolation: isolate; }
-.cover::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse at 72% 40%, var(--clear) 30%, var(--vignette) 90%); }
-.cover-inner { max-width: 1420px; margin: auto; padding: 58px max(5vw, 32px) 42px; min-height: 650px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); align-items: center; gap: 20px; }
-.cover-copy { position: relative; z-index: 2; padding-bottom: 8px; }
-.cover-kicker { font: 12px var(--font-ui); color: var(--moon-muted); letter-spacing: 3px; display: flex; align-items: center; gap: 14px; margin-bottom: 36px; }
-.kicker-line { width: 28px; height: 1px; background: var(--moon-muted); }
-.issue { margin-left: auto; font-size: 10px; letter-spacing: 1px; padding-right: 24px; }
-h1 { display: flex; align-items: center; gap: 26px; margin: 0; font-family: var(--font-display); font-weight: 800; letter-spacing: -.055em; line-height: 1.1; }
-.title-main { font-size: clamp(74px, 10.6vw, 152px); white-space: nowrap; }
-.title-main > span { display: inline-block; }
-.title-sub { font-size: clamp(24px, 3vw, 42px); line-height: 1.35; font-weight: 400; letter-spacing: .06em; border-left: 1px solid var(--line-dark); padding-left: 23px; }
-.roman-name { font: italic 22px var(--font-latin); color: var(--moon-muted); letter-spacing: 1px; margin: 18px 0 44px; }
-.roman-name span { font-style: normal; padding: 0 10px; font-size: 16px; }
-.cover-statement { font-size: clamp(23px, 2.3vw, 33px); line-height: 1.75; letter-spacing: 4px; font-weight: 400; margin: 0 0 36px; }
-.cover-action { display: flex; align-items: center; gap: 26px; }
-.read-button { display: inline-flex; align-items: center; justify-content: space-between; padding: 15px 22px; min-height: 55px; width: 173px; border: 1px solid var(--moon-muted); font: 13px var(--font-ui); letter-spacing: 3px; transition: background .25s, color .25s; }
-.read-button:hover { background: var(--moon); color: var(--forest); }
-.read-button > span { font-size: 24px; line-height: 1; letter-spacing: 0; }
-.cover-action > span { font: 10px/1.9 var(--font-ui); letter-spacing: 1px; color: var(--moon-muted); }
-.cover-art { position: relative; min-width: 0; max-width: 650px; justify-self: center; width: 100%; }
-.landscape { transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .8s var(--ease); }
-.landscape > svg { display: block; width: 100%; height: auto; }
-.art-label { position: absolute; top: 9%; left: 1%; writing-mode: vertical-rl; font: 11px var(--font-ui); letter-spacing: 4px; color: var(--moon-muted); z-index: 1; }
-.art-seal { position: absolute; right: 5%; bottom: 15%; background: var(--accent); padding: 12px 8px; color: var(--moon); font-size: 16px; letter-spacing: 4px; line-height: 1.8; transform: rotate(5deg); border: 4px double var(--accent-light); box-shadow: 5px 8px 20px var(--shadow); }
-.art-caption { display: flex; justify-content: space-between; margin: -11px 13% 0; font: 10px var(--font-ui); letter-spacing: 2px; color: var(--moon-muted); }
-.art-caption > span:last-child { letter-spacing: 4px; }
-.cover-bottom { max-width: 1280px; margin: auto; padding: 23px 0 26px; border-top: 1px solid var(--line-dark); display: flex; justify-content: space-between; align-items: center; color: var(--moon-muted); font: 10px var(--font-ui); letter-spacing: 2px; }
-.cover-bottom > a { display: flex; gap: 26px; align-items: center; min-height: 44px; }
-.down-arrow { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid var(--line-dark); border-radius: 50%; font-size: 22px; }
-.prologue { max-width: 1210px; margin: auto; padding: 110px 30px 95px; display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.2fr); gap: 100px; border-bottom: 1px solid var(--line); }
-.tiny-seal { color: var(--accent); display: inline-grid; place-items: center; border: 1px solid var(--accent); width: 30px; height: 32px; font-size: 18px; }
-.prologue h2 { margin: 26px 0 18px; font-size: clamp(27px, 3vw, 41px); line-height: 1.6; font-weight: 600; letter-spacing: 1px; }
-.prologue-note { font: 11px var(--font-ui); color: var(--muted); letter-spacing: 2px; }
-.lead { font-size: 17px; line-height: 2.2; margin: 0; text-align: justify; }
-.tags { display: flex; flex-wrap: wrap; gap: 9px 16px; margin-top: 24px; }
-.tag { display: inline-block; font: 10px var(--font-ui); letter-spacing: 1px; padding-bottom: 8px; border-bottom: 1px solid var(--line); color: var(--muted); }
-.story-layout { max-width: 1210px; margin: auto; padding: 90px 30px 100px; display: grid; grid-template-columns: 205px minmax(0, 1fr); gap: 95px; align-items: start; }
-.toc { position: sticky; top: calc(var(--nav-h) + 45px); z-index: var(--z-sticky); padding-bottom: 10px; }
-.toc-title { display: flex; justify-content: space-between; align-items: center; color: var(--muted); font: 11px var(--font-ui); letter-spacing: 2px; border-bottom: 1px solid var(--line); padding-bottom: 22px; margin: 0 0 13px; }
-.toc-title > span { letter-spacing: 0; font-size: 10px; }
-.toc nav a { min-height: 50px; display: flex; align-items: center; gap: 16px; color: var(--muted); font-size: 17px; border-bottom: 1px solid var(--clear); transition: color .2s; }
-.toc nav a > span:first-child { font: 11px var(--font-ui); color: var(--muted); }
-.toc nav a.active, .toc nav a:hover { color: var(--accent); }
-.toc nav a.active > span:first-child { color: var(--accent); }
-.toc .toc-arrow { margin-left: auto; opacity: 0; transition: opacity .2s; }
-.toc nav a.active .toc-arrow, .toc nav a:hover .toc-arrow { opacity: 1; }
-.toc-foot { margin-top: 50px; padding-top: 27px; border-top: 1px solid var(--line); }
-.toc-foot p { font-size: 13px; line-height: 2; color: var(--muted); }
-.story { min-width: 0; }
-.chapter { scroll-margin-top: 6px; padding: 0 0 78px; margin-bottom: 70px; border-bottom: 1px solid var(--line); }
-.chapter-heading { position: relative; margin-bottom: 32px; }
-.chapter-ordinal { font-size: 13px; color: var(--accent); letter-spacing: 3px; display: inline-block; margin-right: 17px; font-weight: 400; vertical-align: middle; }
-.chapter-heading h2 { font-size: clamp(32px, 3.5vw, 48px); font-weight: 600; letter-spacing: 3px; line-height: 1.4; margin: 0; }
-.chapter-deck { color: var(--muted); font: 12px var(--font-ui); letter-spacing: 1px; margin: 16px 0 0; }
-.chapter-body { font-size: 17px; line-height: 2.2; text-align: justify; }
-.chapter-body > p { margin: 22px 0; text-indent: 2em; }
-.chapter-body b { color: var(--forest); font-weight: 700; }
-.chapter-body blockquote { margin: 34px 0; padding: 30px 34px; font-size: 19px; line-height: 1.95; color: var(--forest); background: var(--sheet-raised); position: relative; text-align: left; }
-.chapter-body blockquote::before { content: "“"; font: 64px/1 var(--font-latin); position: absolute; left: 14px; top: 4px; color: var(--muted); opacity: .25; }
-.who { display: block; margin-top: 15px; font: 11px/1.8 var(--font-ui); letter-spacing: .4px; color: var(--muted); }
-.chapter-2 blockquote { padding: 35px 37px; background: var(--forest); color: var(--moon); }
-.chapter-2 blockquote::before { color: var(--moon); }
-.chapter-2 .who { color: var(--moon-muted); }
-.chapter-3 blockquote { background: var(--clear); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 35px 0; font-size: clamp(25px, 3.2vw, 40px); line-height: 1.8; letter-spacing: 2px; }
-.chapter-3 blockquote::before { display: none; }
-.chapter-3 blockquote .who { letter-spacing: 0; }
-.chapter-4 blockquote { background: var(--clear); padding: 16px 0 18px 35px; font-size: 27px; }
-.chapter-4 blockquote::before { left: -4px; top: 3px; color: var(--accent); opacity: .6; }
-.case-file { margin-top: 34px; border-top: 1px solid var(--line); }
-.case-file-heading { display: flex; justify-content: space-between; padding-top: 15px; font: 10px var(--font-ui); color: var(--muted); letter-spacing: 2px; }
-.case { padding: 30px 0; border-bottom: 1px solid var(--line); }
-.case:last-child { border-bottom: 0; padding-bottom: 0; }
-.case-title { display: flex; align-items: flex-start; gap: 22px; margin-bottom: 20px; }
-.case-number { font: italic 37px/1.2 var(--font-latin); color: var(--accent); }
-.case-title h3 { font-size: 23px; line-height: 1.6; font-weight: 400; margin: 0; }
-.case-title h3 > span { display: inline-block; font: 11px var(--font-ui); color: var(--muted); }
-.case-body { font-size: 16px; line-height: 2.1; }
-.chapter-6 blockquote { background: var(--clear); color: var(--accent); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: clamp(25px, 3vw, 35px); padding: 27px 0; letter-spacing: 1px; }
-.chapter-6 blockquote::before { display: none; }
-.chapter-7 { border: 0; margin-bottom: 30px; padding-bottom: 10px; }
-.ping { background: var(--sheet-raised); padding: 35px 38px; position: relative; }
-.ping .t { font-size: 48px; line-height: 1.2; color: var(--accent); font-weight: 400; margin-bottom: 20px; }
-.ping p { font-size: 17px; line-height: 2.25; margin: 18px 0; text-indent: 2em; }
-.appendix { padding-top: 45px; margin-top: 45px; border-top: 1px solid var(--line); }
-.appendix h2 { font-size: 26px; font-weight: 500; letter-spacing: 2px; margin: 0 0 24px; }
-.appendix h2 > span { font: 11px var(--font-ui); color: var(--accent); margin-right: 15px; letter-spacing: 1px; }
-.appendix .card { background: var(--clear); }
-.appendix .card p { font-size: 14px; line-height: 2.7; color: var(--muted); margin: 0; overflow-wrap: anywhere; }
-.appendix b { font-weight: 500; color: var(--ink); }
-#voices-2 .card p { columns: 2; column-gap: 36px; font-size: 16px; }
-.quote-stage { background: var(--forest); color: var(--moon); padding: 70px max(6vw, calc((100vw - 1150px)/2)); position: relative; }
-.quote-stage-top { display: flex; justify-content: space-between; gap: 20px; align-items: center; padding-bottom: 23px; border-bottom: 1px solid var(--line-dark); }
-.quote-stage-top h2 { font-size: 22px; margin: 0; font-weight: 400; letter-spacing: 2px; }
-.quote-stage-top > span { color: var(--moon-muted); font: 10px var(--font-ui); letter-spacing: 2px; }
-.featured-quote { min-height: 300px; display: flex; align-items: center; gap: 25px; padding: 40px 0; }
-.quote-mark { color: var(--moon-muted); align-self: flex-start; padding-top: 8px; font: 150px/1 var(--font-latin); opacity: .45; }
-.featured-quote blockquote { margin: 0; }
-.featured-quote p { font-size: clamp(32px, 5.2vw, 67px); line-height: 1.6; letter-spacing: 2px; margin: 0 0 28px; }
-.featured-quote cite { font: normal 12px var(--font-ui); color: var(--moon-muted); letter-spacing: 2px; }
-.quote-stage-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 20px; border-top: 1px solid var(--line-dark); }
-#quote-count { font: 13px var(--font-latin); letter-spacing: 4px; color: var(--moon-muted); }
-.quote-controls { display: flex; gap: 10px; }
-.quote-controls button { width: 50px; height: 50px; border: 1px solid var(--line-dark); color: var(--moon); background: var(--clear); font: 25px var(--font-ui); transition: color .2s, background .2s; }
-.quote-controls button:hover { color: var(--forest); background: var(--moon); }
-.site-footer { max-width: 1210px; margin: auto; padding: 75px 30px 50px; }
-.footer-title { display: flex; align-items: center; gap: 18px; font-size: 49px; letter-spacing: -1px; width: fit-content; min-height: 60px; }
-.footer-title > span:not(.footer-arrow) { font-size: 18px; writing-mode: vertical-rl; letter-spacing: 3px; }
-.footer-arrow { font: 34px var(--font-ui); color: var(--accent); margin-left: 18px; }
-.footer-bottom { display: flex; justify-content: space-between; align-items: end; gap: 45px; border-top: 1px solid var(--line); margin-top: 40px; padding-top: 30px; }
-.footer-bottom p { margin: 0; max-width: 850px; font: 11px/2.1 var(--font-ui); color: var(--muted); }
-.footer-seal { flex-shrink: 0; padding: 7px 8px; border: 3px double var(--accent); color: var(--accent); font-size: 13px; line-height: 1.7; letter-spacing: 2px; }
-.back-top { position: fixed; bottom: 25px; right: 25px; z-index: 20; width: 44px; height: 44px; display: grid; place-items: center; background: var(--sheet); color: var(--forest); border: 1px solid var(--line); font: 24px var(--font-ui); box-shadow: 0 4px 18px var(--shadow); }
-.orbit-path { stroke-dasharray: 530; stroke-dashoffset: 0; }
-@media (prefers-reduced-motion: no-preference) {
-  .title-main > span { animation: title-arrive 1.2s var(--ease) both; }
-  .title-main > span:nth-child(2) { animation-delay: .12s; }
-  .title-main > span:nth-child(3) { animation-delay: .24s; }
-  .orbit-path { animation: orbit-draw 2.5s var(--ease) both; }
-  .layer-far { animation: distant-drift 15s ease-in-out infinite alternate; transform-origin: center; }
-  @keyframes title-arrive { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-  @keyframes orbit-draw { from { stroke-dashoffset: 530; } to { stroke-dashoffset: 0; } }
-  @keyframes distant-drift { from { transform: translateY(0); } to { transform: translateY(-7px); } }
+.community-nav { position: sticky; top: 0; z-index: 40; height: var(--site-nav-h); color: var(--site-moon); background: var(--site-forest); border-bottom: 1px solid var(--site-line-dark); font-family: var(--site-ui); }
+.community-nav-inner { max-width: 1150px; height: 100%; margin: auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.community-brand { display: flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; min-height: 44px; white-space: nowrap; }
+.community-symbol { display: grid; place-items: center; border: 1px solid var(--site-soft); width: 35px; height: 35px; font: 17px Georgia,serif; }
+.community-brand > span:last-child { font-size: 15px; font-weight: 500; letter-spacing: 1px; }
+.community-brand small { display: block; font-size: 9px; font-weight: 400; color: var(--site-soft); margin-top: 2px; letter-spacing: 1px; }
+.community-nav nav { display: flex; gap: 27px; align-items: center; }
+.community-nav nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 0; color: var(--site-soft); font-size: 12px; letter-spacing: 1px; text-decoration: none; white-space: nowrap; position: relative; }
+.community-nav nav a[aria-current="page"], .community-nav nav a:hover { color: var(--site-moon); }
+.community-nav nav a[aria-current="page"]::after { content: ""; position: absolute; bottom: 5px; left: 0; right: 0; height: 1px; background: currentColor; }
+.report-header { padding: 48px 0 33px; background: var(--site-surface); margin-bottom: 25px; }
+.report-header h1 { font-size: clamp(25px, 4vw, 37px); line-height: 1.4; letter-spacing: -1px; margin-bottom: 18px; }
+.report-header .meta { line-height: 2; }
+.report-content { padding-bottom: 70px; }
+.report-toc { border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: center; gap: 0 18px; padding: 4px 0 18px; margin-bottom: 26px; font-size: 12px; }
+.report-toc > span { color: var(--dim); margin-right: 5px; }
+.report-toc a { color: var(--site-ink); display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; white-space: nowrap; }
+.report-toc a:hover { color: var(--site-accent); text-decoration: underline; text-underline-offset: 5px; }
+.attachment-notice { font-size: 12px; color: var(--dim); line-height: 1.8; margin: 0 0 14px; padding: 12px 15px; border: 1px solid var(--line); border-radius: 6px; }
+.source-unavailable { min-height: 105px; padding: 25px 18px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 7px; background: var(--bg); border: 1px dashed var(--line); border-radius: 6px; color: var(--dim); text-align: center; }
+.source-unavailable > span { font-size: 14px; }
+.source-unavailable > small { font-size: 12px; }
+.grid2 { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+.grid2 > * { min-width: 0; }
+.scroll { max-width: 100%; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; }
+.formula { white-space: nowrap; }
+h1,h2,h3 { overflow-wrap: anywhere; min-width: 0; }
+.related-link { display: inline-flex; align-items: center; gap: 18px; color: var(--site-ink); font-size: 14px; min-height: 44px; margin-bottom: 13px; text-decoration: none; }
+.related-link:hover { text-decoration: underline; text-underline-offset: 5px; }
+.stories-page { background: var(--site-surface); color: var(--site-ink); font-family: var(--site-ui); }
+.stories-main { max-width: 1020px; margin: auto; padding: 35px 30px 70px; }
+.breadcrumbs { display: flex; align-items: center; gap: 14px; font-size: 11px; color: var(--site-ink); }
+.breadcrumbs a { color: inherit; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+.stories-heading { background: none; border: 0; padding: 28px 0 45px; margin: 0; }
+.stories-heading h1 { font: 500 clamp(38px,5.7vw,64px)/1.5 var(--site-serif); margin: 0 0 18px; letter-spacing: 1px; }
+.stories-heading p { color: var(--site-ink); opacity: .75; font-size: 12px; letter-spacing: 1px; margin: 0; }
+.story-entry { display: grid; grid-template-columns: minmax(0,1.5fr) minmax(0,1fr); background: var(--site-forest); color: var(--site-moon); text-decoration: none; border: 1px solid var(--site-line-dark); }
+.entry-content { padding: 44px 48px; }
+.story-volume { color: var(--site-soft); font-size: 11px; letter-spacing: 2px; }
+.entry-content h2 { font: 500 clamp(30px,4vw,43px)/1.5 var(--site-serif); margin: 16px 0; padding: 0; border: none; letter-spacing: 2px; }
+.entry-content p { margin: 0; font: 16px/1.8 var(--site-serif); color: var(--site-soft); }
+.story-read { display: flex; align-items: center; gap: 24px; width: fit-content; margin-top: 45px; padding-bottom: 9px; border-bottom: 1px solid var(--site-soft); font-size: 12px; }
+.entry-portrait { display: flex; align-items: center; justify-content: center; gap: 20px; min-width: 0; border-left: 1px solid var(--site-line-dark); }
+.entry-portrait > span:first-child { font: 400 clamp(110px,16vw,180px)/1.1 var(--site-serif); }
+.portrait-caption { color: var(--site-soft); writing-mode: vertical-rl; font: 12px/2 var(--site-serif); letter-spacing: 3px; }
+.return-report { display: inline-flex; align-items: center; min-height: 44px; color: var(--site-ink); font-size: 12px; margin-top: 29px; text-decoration: underline; text-underline-offset: 6px; }
+.stories-footer { max-width: 960px; margin: 0 auto; border-top: 1px solid var(--site-line); padding: 25px 0 40px; font: 11px var(--site-ui); color: var(--site-ink); }
+@media(max-width:760px) {
+  .grid2 { grid-template-columns: minmax(0,1fr); }
+  .report-header { padding-top: 32px; }
+  .report-toc { gap: 0 18px; }
+  .stories-main { padding-top: 25px; }
+  .entry-content { padding: 32px; }
+  .entry-portrait { gap: 12px; }
+  .stories-footer { margin-inline: 30px; }
 }
-@media (min-width: 1440px) { .cover-inner { min-height: 700px; } }
-@media (max-width: 1370px) { .cover-bottom { margin-inline: 5vw; } }
-@media (max-width: 1060px) {
-  .cover-inner { min-height: 575px; padding-top: 50px; }
-  h1 { gap: 15px; }
-  .title-main { font-size: 10.4vw; }
-  .title-sub { padding-left: 14px; }
-  .cover-kicker { margin-bottom: 30px; }
-  .issue { display: none; }
-  .prologue { gap: 65px; }
-  .story-layout { grid-template-columns: 170px minmax(0, 1fr); gap: 50px; }
+@media(max-width:560px) {
+  :root { --site-nav-h: 66px; }
+  .community-nav-inner { padding-inline: 20px; gap: 10px; }
+  .community-brand { gap: 8px; }
+  .community-brand > span:last-child { font-size: 12px; letter-spacing: 0; }
+  .community-brand small { font-size: 8px; }
+  .community-symbol { width: 29px; height: 31px; font-size: 15px; }
+  .community-nav nav { gap: 16px; }
+  .community-nav nav a { font-size: 11px; letter-spacing: 0; }
+  .wrap { padding-inline: 20px; }
+  .report-header h1 { font-size: 27px; letter-spacing: -.5px; }
+  .report-header .meta { font-size: 11px; }
+  .report-header .tag { font-size: 10px; }
+  .report-toc { gap: 0 17px; font-size: 11px; padding-bottom: 10px; }
+  .report-toc > span { width: 100%; margin-bottom: 1px; }
+  .report-content h2 { font-size: 18px; line-height: 1.6; }
+  .report-content h3 { font-size: 15px; }
+  .card { padding: 16px; }
+  .note,.key { padding: 12px 14px; }
+  .scroll table { min-width: 560px; }
+  .stories-main { padding-inline: 20px; padding-bottom: 45px; }
+  .stories-heading { padding-top: 23px; padding-bottom: 32px; }
+  .stories-heading h1 { font-size: 38px; }
+  .stories-heading p { font-size: 10px; }
+  .story-entry { grid-template-columns: minmax(0,1fr); }
+  .entry-content { padding: 30px; }
+  .entry-content h2 { font-size: 33px; }
+  .entry-content p { font-size: 15px; }
+  .story-read { margin-top: 28px; }
+  .entry-portrait { min-height: 190px; border-left: 0; border-top: 1px solid var(--site-line-dark); }
+  .entry-portrait > span:first-child { font-size: 120px; }
+  .stories-footer { margin-inline: 20px; line-height: 1.8; }
 }
-@media (max-width: 768px) {
-  :root { --nav-h: 66px; }
-  .site-header { padding-inline: 24px; }
-  .site-header nav { gap: 20px; }
-  .brand > span:last-child { font-size: 14px; letter-spacing: 2px; }
-  .brand small { font-size: 7px; }
-  .cover-inner { grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); min-height: 510px; padding: 48px 24px 45px; gap: 8px; }
-  .title-main { font-size: 10.2vw; }
-  .title-sub { font-size: 24px; }
-  .roman-name { font-size: 17px; margin-bottom: 32px; }
-  .roman-name span { padding-inline: 4px; }
-  .cover-statement { font-size: 23px; letter-spacing: 2px; }
-  .cover-action { gap: 17px; }
-  .cover-action > span { display: none; }
-  .art-label { font-size: 9px; left: -1%; }
-  .art-seal { font-size: 13px; padding: 6px; }
-  .art-caption { display: none; }
-  .cover-bottom { margin-inline: 24px; letter-spacing: 1px; }
-  .cover-bottom > span:nth-child(2) { display: none; }
-  .prologue { padding: 70px 30px; gap: 42px; }
-  .prologue h2 { font-size: 28px; }
-  .lead { font-size: 16px; line-height: 2; }
-  .story-layout { display: block; padding: 65px 30px 75px; }
-  .toc { display: none; }
-  .chapter { padding-bottom: 55px; margin-bottom: 55px; }
-  .chapter-heading h2 { font-size: 38px; }
-  .chapter-body { font-size: 17px; line-height: 2.1; }
-  .chapter-body blockquote { font-size: 19px; }
-  .chapter-3 blockquote, .chapter-4 blockquote, .chapter-6 blockquote { font-size: 29px; }
-  .quote-stage { padding: 55px 30px; }
-  .featured-quote { min-height: 280px; gap: 15px; }
-  .quote-mark { font-size: 90px; }
-  .featured-quote p { font-size: 37px; }
-  .site-footer { padding: 55px 30px 35px; }
+@media(max-width:360px) {
+  .community-nav-inner { padding-inline: 16px; }
+  .community-brand small { font-size: 7px; }
+  .community-nav nav { gap: 13px; }
+  .community-brand > span:last-child { font-size: 11px; }
 }
-@media (max-width: 560px) {
-  .site-header { padding-inline: 20px; }
-  .brand { gap: 8px; }
-  .brand-seal { width: 29px; height: 31px; font-size: 20px; }
-  .site-header nav { gap: 17px; font-size: 11px; letter-spacing: 1px; }
-  .site-header nav > a:first-child { display: none; }
-  .menu-toggle { padding-left: 0; gap: 9px; }
-  .cover-inner { display: flex; flex-direction: column; padding: 35px 24px 10px; gap: 17px; align-items: stretch; }
-  .cover-copy { padding-bottom: 0; }
-  .cover-kicker { font-size: 10px; margin-bottom: 25px; letter-spacing: 2px; }
-  .issue { display: inline; padding-right: 0; font-size: 9px; }
-  h1 { gap: 18px; }
-  .title-main { font-size: clamp(68px, 20vw, 106px); }
-  .title-sub { font-size: 27px; padding-left: 17px; }
-  .roman-name { font-size: 17px; margin: 14px 0 22px; }
-  .cover-statement { font-size: 23px; line-height: 1.7; margin-bottom: 22px; }
-  .cover-action { gap: 23px; }
-  .read-button { min-height: 48px; width: 151px; padding: 11px 18px; font-size: 12px; }
-  .cover-action > span { display: block; font-size: 9px; }
-  .cover-art { width: min(360px, 100%); align-self: center; margin-top: -13px; }
-  .art-label { top: 12%; left: 1%; }
-  .art-seal { right: 7%; bottom: 16%; font-size: 13px; }
-  .cover-bottom { margin-inline: 24px; padding: 7px 0 13px; font-size: 8px; }
-  .cover-bottom > a { gap: 9px; }
-  .cover-bottom > a > span:first-child { font-size: 9px; }
-  .down-arrow { width: 30px; height: 30px; font-size: 19px; }
-  .prologue { display: block; padding: 62px 24px 55px; }
-  .prologue-title { margin-bottom: 32px; }
-  .prologue h2 { font-size: 31px; margin: 19px 0 14px; }
-  .lead { font-size: 16px; line-height: 2.1; }
-  .tags { gap: 10px 15px; }
-  .tag { font-size: 10px; }
-  .story-layout { padding: 55px 24px 60px; }
-  .chapter-heading { margin-bottom: 27px; }
-  .chapter-heading h2 { font-size: 35px; }
-  .chapter-ordinal { font-size: 12px; margin-bottom: 11px; }
-  .chapter-deck { font-size: 11px; }
-  .chapter-body { font-size: 16px; line-height: 2.15; }
-  .chapter-body > p { margin: 20px 0; }
-  .chapter-body blockquote { padding: 27px 23px; margin: 27px 0; font-size: 18px; line-height: 2; }
-  .chapter-3 blockquote, .chapter-6 blockquote { padding-inline: 0; font-size: 26px; }
-  .chapter-4 blockquote { padding: 15px 0 15px 28px; font-size: 24px; }
-  .who { font-size: 10px; }
-  .case-title { gap: 18px; }
-  .case-title h3 { font-size: 22px; }
-  .case-body { font-size: 15px; }
-  .ping { padding: 27px 23px; }
-  .ping .t { font-size: 40px; }
-  .ping p { font-size: 16px; line-height: 2.1; }
-  .appendix { margin-top: 37px; padding-top: 34px; }
-  .appendix h2 { font-size: 23px; }
-  .appendix .card p { font-size: 13px; line-height: 2.6; }
-  #voices-2 .card p { columns: 1; font-size: 16px; line-height: 2.5; }
-  .quote-stage { padding: 42px 24px; }
-  .quote-stage-top { display: block; padding-bottom: 20px; }
-  .quote-stage-top h2 { font-size: 21px; margin-bottom: 12px; }
-  .quote-stage-top > span { font-size: 9px; }
-  .featured-quote { min-height: 260px; gap: 8px; padding: 35px 0; }
-  .quote-mark { font-size: 70px; }
-  .featured-quote p { font-size: 30px; line-height: 1.6; letter-spacing: 0; }
-  .featured-quote cite { font-size: 10px; letter-spacing: 1px; }
-  .quote-controls button { width: 44px; height: 44px; }
-  .site-footer { padding: 45px 24px 35px; }
-  .footer-title { font-size: 40px; gap: 14px; }
-  .footer-arrow { margin-left: 4px; }
-  .footer-bottom { align-items: start; gap: 20px; margin-top: 27px; padding-top: 23px; }
-  .footer-bottom p { font-size: 10px; }
-  .footer-seal { font-size: 11px; padding: 5px; letter-spacing: 1px; }
-  .chapter-menu { padding: 20px 24px; }
-  .back-top { right: 15px; bottom: calc(15px + env(safe-area-inset-bottom)); }
-}
-@media (max-width: 360px) {
-  .site-header { padding-inline: 17px; }
-  .brand > span:last-child { font-size: 12px; }
-  .site-header nav { gap: 13px; }
-  .cover-inner { padding-inline: 20px; }
-  .title-main { font-size: 67px; }
-  .title-sub { font-size: 23px; padding-left: 13px; }
-  .cover-kicker .issue { letter-spacing: 0; }
-  .cover-bottom { margin-inline: 20px; }
-  .prologue, .story-layout, .quote-stage, .site-footer { padding-inline: 20px; }
-  .footer-bottom { display: block; }
-  .footer-seal { display: inline-block; margin-top: 20px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
-  .landscape { transform: none; }
-  .title-main > span { opacity: 1; transform: none; }
-  .orbit-path { stroke-dashoffset: 0; }
-}
-@media print {
-  .site-header, .cover, .toc, .menu-scrim, .chapter-menu, .back-top, .reading-progress, .quote-stage, .skip-link { display: none !important; }
-  body::before { display: none; }
-  .prologue, .story-layout, .site-footer { max-width: none; padding: 25px 0; }
-  .prologue, .story-layout { display: block; }
-  .prologue-title { margin-bottom: 30px; }
-  .chapter { padding-bottom: 25px; margin-bottom: 25px; }
-  .chapter-body, .lead, .ping p, .case-body { font-size: 12pt; }
-  .chapter-heading, blockquote, .case-title { break-inside: avoid; }
-}
-</style>
-</head>
-<body>
-  <a class="skip-link" href="#main">跳至正文</a>
-  <div class="reading-progress" aria-hidden="true"><div id="progress-fill"></div></div>
-  <header class="site-header" id="site-header">
-    <a class="brand" href="#top" aria-label="杭州群侠录，回到封面"><span class="brand-seal" aria-hidden="true">杭</span><span>杭州群侠录<small>THE NEXT P7</small></span></a>
-    <nav aria-label="页面导航"><a href="#main">小传</a><a href="#voices-1">群友语录</a><button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="chapter-menu"><span class="menu-text">目录</span><span class="menu-icon" aria-hidden="true"><i></i><i></i></span></button></nav>
-  </header>
-  <div class="menu-scrim" id="menu-scrim" hidden></div>
-  <aside class="chapter-menu" id="chapter-menu" hidden aria-label="章节目录"><div class="menu-top"><span>七篇小传 · 两则附录</span><button id="menu-close" aria-label="关闭目录">×</button></div><div class="menu-links"><a href="#chapter-1" data-chapter="1"><span>其一</span>实名上网<span class="toc-arrow" aria-hidden="true">↗</span></a><a href="#chapter-2" data-chapter="2"><span>其二</span>滇西活地图<span class="toc-arrow" aria-hidden="true">↗</span></a><a href="#chapter-3" data-chapter="3"><span>其三</span>日行千里<span class="toc-arrow" aria-hidden="true">↗</span></a><a href="#chapter-4" data-chapter="4"><span>其四</span>售后调教<span class="toc-arrow" aria-hidden="true">↗</span></a><a href="#chapter-5" data-chapter="5"><span>其五</span>战绩三则<span class="toc-arrow" aria-hidden="true">↗</span></a><a href="#chapter-6" data-chapter="6"><span>其六</span>椰汁公案<span class="toc-arrow" aria-hidden="true">↗</span></a><a href="#chapter-7" data-chapter="7"><span>其七</span>论曰<span class="toc-arrow" aria-hidden="true">↗</span></a><a href="#voices-1"><span>附录</span>群友语录<span class="toc-arrow" aria-hidden="true">↗</span></a><a href="#voices-2"><span>附录</span>马德轩原声<span class="toc-arrow" aria-hidden="true">↗</span></a></div><p>一张截图，竟成举群典故。</p></aside>
-  <section class="cover" id="top" aria-labelledby="cover-title">
-    <div class="cover-inner">
-      <div class="cover-copy">
-        <div class="cover-kicker"><span class="kicker-line"></span>群侠录之一 <span class="issue">人物 · 0351</span></div>
-        <h1 id="cover-title"><span class="title-main"><span>马</span><span>德</span><span>轩</span></span><span class="title-sub">小<br>传</span></h1>
-        <p class="roman-name">Ma Dexuan <span>·</span> A Portrait</p>
-        <p class="cover-statement">外贫而内直，<br>好争而不记仇。</p>
-        <div class="cover-action"><a class="read-button" href="#main">入卷一读 <span aria-hidden="true">↘</span></a><span>据群聊实录<br>2025.11 — 2026.10</span></div>
-      </div>
-      <div class="cover-art" id="cover-art">
-        <div class="art-label art-label-top">滇西三载 · 千里单骑</div>
-        <div class="landscape" id="landscape"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 680" role="img" aria-labelledby="landscape-title landscape-desc">
-  <title id="landscape-title">山川有路</title><desc id="landscape-desc">圆形山水画中，层叠青山环绕一条蜿蜒公路，绿色小车行于路上，象征滇西三载与千里单骑。</desc>
-  <defs>
-    <clipPath id="orb-clip"><circle cx="320" cy="315" r="260"/></clipPath>
-    <linearGradient id="sky" x1="0" x2="0.25" y2="1"><stop stop-color="var(--art-tone-16)"/><stop offset="1" stop-color="var(--art-tone-08)"/></linearGradient>
-    <linearGradient id="mountain" x1="0" y1="0" x2="1" y2="1"><stop stop-color="var(--art-tone-09)"/><stop offset="1" stop-color="var(--art-tone-06)"/></linearGradient>
-    <linearGradient id="foreground" x1="0" x2="0.8" y2="1"><stop stop-color="var(--art-tone-04)"/><stop offset="1" stop-color="var(--art-tone-01)"/></linearGradient>
-    <linearGradient id="road" x1="0.5" y1="0" x2="0.5" y2="1"><stop stop-color="var(--art-tone-18)"/><stop offset="1" stop-color="var(--art-tone-25)"/></linearGradient>
-    <radialGradient id="sun-glow"><stop stop-color="var(--art-tone-26)" stop-opacity=".55"/><stop offset="1" stop-color="var(--art-tone-26)" stop-opacity="0"/></radialGradient>
-  </defs>
-  <g class="orb-rings" fill="none" stroke="var(--art-tone-21)"><circle cx="320" cy="315" r="279" opacity=".3"/><circle cx="320" cy="315" r="292" opacity=".12"/><path d="M28 315H54M586 315H612M320 7V33M320 597V623" opacity=".55"/><path d="M113 108l18 18M510 505l18 18M113 523l18-18M510 126l18-18" opacity=".35"/></g>
-  <g clip-path="url(#orb-clip)">
-    <circle cx="320" cy="315" r="260" fill="url(#sky)"/>
-    <g class="mountain-layer layer-far"><circle cx="383" cy="205" r="110" fill="url(#sun-glow)"/><circle cx="383" cy="205" r="54" fill="var(--art-tone-24)"/><path d="M40 350L123 219 161 266 224 156 287 260 349 213 412 298 497 150 569 272 636 242V590H40Z" fill="var(--art-tone-13)"/><path d="M70 407L155 309 210 338 286 245 348 323 396 288 472 383 531 291 610 394V600H40Z" fill="var(--art-tone-11)"/></g>
-    <g class="mountain-layer layer-middle"><path d="M-20 454L89 353 157 416 219 302 282 402 340 355 397 444 491 316 570 438 655 375V655H-20Z" fill="url(#mountain)"/><g fill="none" stroke="var(--art-tone-14)" stroke-width=".8" opacity=".4"><path d="M45 453l50-69 63 61 64-109 58 105M64 468l39-57 57 57 65-99 53 96M93 483l26-47 41 51 67-90 39 77M379 457l110-108 82 120M399 477l90-94 70 91M418 492l70-72 55 64"/></g></g>
-    <g class="mountain-layer layer-near"><path d="M0 510Q104 425 192 482T320 460Q363 425 408 477T555 453L650 500V700H0Z" fill="url(#foreground)"/><path d="M345 371C246 432 474 448 388 491S227 520 316 619H385C242 524 411 522 438 481S275 429 345 371Z" fill="url(#road)"/><path d="M345 371C266 432 483 448 412 488S237 521 350 619" fill="none" stroke="var(--art-tone-10)" stroke-width="1.8" stroke-dasharray="12 10" opacity=".65"/><g fill="none" stroke="var(--art-tone-12)" opacity=".32" stroke-width=".9"><path d="M21 529Q128 455 209 511M24 546Q125 471 219 531M39 559Q126 490 229 552M474 510q50-49 103-30M471 531q71-63 128-28M464 552q89-80 147-25"/></g><g transform="translate(348 499) rotate(-12)"><ellipse cx="0" cy="24" rx="34" ry="8" fill="var(--art-tone-02)" opacity=".4"/><path d="M-27 0l8-17q19-6 38 0l8 17v26h-54z" fill="var(--art-tone-15)" stroke="var(--art-tone-23)" stroke-width="1.3"/><path d="M-18-13q18-5 36 0l5 13h-46z" fill="var(--art-tone-05)"/><path d="M-21 5h42v13h-42z" fill="var(--art-tone-17)"/><path d="M-21 9h13M8 9h13" stroke="var(--art-tone-28)" stroke-width="3"/><rect x="-8" y="18" width="16" height="5" rx="1" fill="var(--art-tone-07)"/><path d="M-26 18v10M26 18v10" stroke="var(--art-tone-03)" stroke-width="5"/></g></g>
-    <g fill="none" stroke="var(--art-tone-27)" opacity=".18"><path d="M66 266q93-40 183-15M403 304q83-19 161 4M80 303q63-19 99-9"/></g>
-  </g>
-  <circle cx="320" cy="315" r="260" fill="none" stroke="var(--art-tone-21)" stroke-opacity=".5"/>
-  <path class="orbit-path" d="M69 410A270 270 0 0 1 414 59" fill="none" stroke="var(--art-tone-22)" stroke-width="2" stroke-linecap="round"/>
-  <g fill="var(--art-tone-20)"><circle cx="65" cy="394" r="3"/><circle cx="413" cy="61" r="4"/></g>
-  <g fill="var(--art-tone-19)" font-family="Georgia,serif" font-size="11" letter-spacing="4"><text x="282" y="655">ON THE ROAD</text></g>
-</svg>
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } }
+@media print { .community-nav,.report-toc,.skip-link,.related-link,.attachment-notice { display:none; } .wrap { max-width:none; padding:0; } .scroll { overflow:visible; } .report-header { padding:0 0 20px; } }
+</style></head><body><a class="skip-link" href="#report">跳至报告正文</a><div class="community-nav"><div class="community-nav-inner">
+      <a class="community-brand" href="./"><span class="community-symbol" aria-hidden="true">P7</span><span>杭州 P7 车友会<small>车友资料与群中故事</small></span></a>
+      <nav aria-label="网站导航"><a href="./" aria-current="page">保险调研</a><a href="stories/" >群侠录</a></nav>
+    </div></div>
+<header class="report-header"><div class="wrap">
+  <h1>全新小鹏P7 保险调研报告</h1>
+  <div class="meta">
+    <span class="tag">数据源</span>「杭州THE NEXT P7 车友会」群聊记录 ·
+    <span class="tag">覆盖</span>2025-11-25 ~ 2026-10-09 ·
+    <span class="tag">样本</span>约 17.7 万条消息 / 2.8 万条命中 / 1.6 万张图片
+  </div>
+</div></header>
+
+<main class="wrap report-content" id="report">
+
+<p class="attachment-notice" role="note">图片附件：原报告引用的 8 张图片原件暂缺，全文、表格和图注已保留。</p><nav class="report-toc" aria-label="报告目录"><span>报告目录</span><a href="#summary">摘要</a><a href="#claims">事故与理赔</a><a href="#premiums">保费与出险</a><a href="#violations">违规情况</a><a href="#pricing">定价因素</a><a href="#advice">实操建议</a><a href="#sources">来源与方法</a></nav><h2 id="summary">摘要</h2>
+<div class="card">
+<ol>
+  <li><b>出事故走不走商业险，群里有一条被反复验证的分界线：2000 元。</b>
+      交强险的财产损失赔偿限额就是 2000 元；定损 ≤2000 走交强险（或私了），超过 2000 就必须动商业险。</li>
+  <li><b>首年保费集中在 5900～9300 元，主要差在版本和三者保额上。</b>
+      702 两驱多为 5900～7800 元；四驱 750 约 8000～9500 元；鹏翼版最高约 9300 元。
+      三者 300 万 → 500 万，单这一项差约 500～1000 元。</li>
+  <li><b>第二年续保普遍下降，但"出险一次"会吃掉约 2000 元降幅。</b>
+      无出险续保约 5000 元上下；出险 1 次后普遍落在 6050～7220 元；
+      对标口径是"不出险的续保价"，而不是首年保费——这一点群里被反复纠正过。</li>
+  <li><b>违章对保费的影响被显著低估。</b>
+      群里有真实案例：违章 2 次的报价"比出险的还贵"，保险业务员原话是"风险评分太高"。</li>
+  <li><b>这款车定价偏贵的三个车型级原因：新车价高（21.98 万起）→ 车损险基数大；
+      零整比/维修单价高；保险公司给的风险等级高</b>（业务员原话："小鹏和小米一样危险指数最高"）。</li>
+</ol>
 </div>
-        <div class="art-seal" aria-label="有此癖者，可交也">有此癖者<br>可交也</div>
-        <div class="art-caption"><span>山川有路，群中有人。</span><span aria-hidden="true">山 · 水 · 行</span></div>
-      </div>
-    </div>
-    <div class="cover-bottom"><span>多芒 / 702 / 绿色 / 0351</span><span>一个新 P7 车主的江湖</span><a href="#main" aria-label="向下阅读"><span>向下翻阅</span><span class="down-arrow" aria-hidden="true">↓</span></a></div>
-  </section>
-  <main id="main">
-    <section class="prologue" aria-labelledby="prologue-title"><div class="prologue-title"><span class="tiny-seal">序</span><h2 id="prologue-title">其可笑处，<br>恰是其可爱处。</h2><span class="prologue-note">杭之新 P7 车主也</span></div><div class="prologue-copy"><p class="lead">
-马德轩者，杭之新P7车主也。群中名号「多芒　702　绿色　0351」，车机自署「马某轩的小p」。
-自谓「00后新手司机」；尝客滇西三载，足迹遍丽江、迪庆、德宏、腾冲，
-故群友又号之曰「活地图」。其为人也，性直而言诙谐，好自夸而不失厚道，
-凡遇不平则必较真到底，凡遇熟人则必贫嘴三分。
-</p><div class="tags">
-  <span class="tag">702 · 绿色 · 0351</span>
-  <span class="tag">00后新手司机</span>
-  <span class="tag">滇西活地图</span>
-  <span class="tag">售后调教师</span>
-  <span class="tag">通宵的神</span>
-  <span class="tag">实名上网第一人</span>
-</div></div></section>
-    <div class="story-layout"><aside class="toc"><p class="toc-title">卷中目录 <span>七篇</span></p><nav aria-label="故事章节"><a href="#chapter-1" data-chapter="1"><span>其一</span>实名上网<span class="toc-arrow" aria-hidden="true">↗</span></a><a href="#chapter-2" data-chapter="2"><span>其二</span>滇西活地图<span class="toc-arrow" aria-hidden="true">↗</span></a><a href="#chapter-3" data-chapter="3"><span>其三</span>日行千里<span class="toc-arrow" aria-hidden="true">↗</span></a><a href="#chapter-4" data-chapter="4"><span>其四</span>售后调教<span class="toc-arrow" aria-hidden="true">↗</span></a><a href="#chapter-5" data-chapter="5"><span>其五</span>战绩三则<span class="toc-arrow" aria-hidden="true">↗</span></a><a href="#chapter-6" data-chapter="6"><span>其六</span>椰汁公案<span class="toc-arrow" aria-hidden="true">↗</span></a><a href="#chapter-7" data-chapter="7"><span>其七</span>论曰<span class="toc-arrow" aria-hidden="true">↗</span></a></nav><div class="toc-foot"><span class="tiny-seal">录</span><p>性直而言诙谐，<br>好自夸而不失厚道。</p></div></aside><article class="story" aria-label="马德轩小传全文"><section class="chapter chapter-1" id="chapter-1" aria-labelledby="title-1"><header class="chapter-heading"><h2 id="title-1"><span class="chapter-ordinal">其一</span>实名上网</h2><p class="chapter-deck">一张截图，举群皆知。</p></header><div class="chapter-body"><p>
-九月廿三日午后，轩以车机 6.3 推送迟迟不至，乃入鹏管家客服群与专员周旋。轩怒而吐狂言，
-扬言若不推送便「去余杭门店上吊」，又央其「升级高级专员」。
-</p>
-<p>
-客服吴梨萍者，温和而正经，从容答曰：
-</p>
-<blockquote>
-「鹏友，您的安全是最重要的，千万不要做伤害自己的事情，但是目前不支持手动推送，
-您把车辆停放在网络良好的地方吧，辛苦您再耐心等待一下了🤭」
-<span class="who">—— 鹏管家 吴梨萍</span>
-</blockquote>
-<p>
-轩自以为得计，截图示众。众视其图，赫然见左上标题六字：<b>「马德轩的鹏管家服务群」</b>——
-轩之大名，遂昭告全群，无从遮掩。
-</p>
-<p>
-轩大窘，急曰「早知道截掉了」。然为时已晚，崔西拊掌而笑：
-</p>
-<blockquote>
-「以后马某轩就是实名上网了，在我们这个群。」
-<span class="who">—— 崔西-702紫</span>
-</blockquote>
-<p>
-时有开攻城狮者，后进也，懵然发问：「马德轩是谁？」崔西应声答曰：「上面跳舞的奶牛。」
-盖轩之头像，乃一跳舞之奶牛也。
-</p>
-<p>
-于是「马德轩　真有你的！」七字，连刷三十余条，一炷香之内举群皆知；
-后又捻出「马车CP」一典，群友嗑之，曰：「我在群里嗑的第一个CP。」
-</p></div></section>
-<section class="chapter chapter-2" id="chapter-2" aria-labelledby="title-2"><header class="chapter-heading"><h2 id="title-2"><span class="chapter-ordinal">其二</span>滇西活地图</h2><p class="chapter-deck">滇西三载，山水如数家珍。</p></header><div class="chapter-body"><p>
-轩自言尝于滇西盘桓三载，「云南还逛了都逛变了」，毕业始归，故于西南山水知之甚稔。
-群友问云南何处好玩，轩乃一一指点：
-</p>
-<blockquote>
-「云南我只推荐丽江迪庆德宏和腾冲，其他可以推沟里。昆明大理推沟里就行。」
-<br>「迪庆最好玩。」「大理不推荐。」
-<br>「芒市我建议把车停一个地方然后自己租个电动车。」
-<span class="who">—— 多芒，2026-09-23</span>
-</blockquote>
-<p>
-又报芒市必吃榜，寻得「有个专门做烧烤的一个村子」，众人跃跃欲试。
-朵拉喜、小能猫齐声曰：「马德轩，下次就找你，活地图。」小能猫更进一言：「马德轩老师，有没有夯爆了的美食？」
-</p>
-<p>
-轩答「这个得看个人口味」，随即列出「瑞丽一寨两国、芒市黑河老坡、傣族古镇」一串地名，
-又许以「芒市必吃榜，我给你找一下」——自此群中凡问滇游者，无不称「马德轩老师」。
-</p></div></section>
-<section class="chapter chapter-3" id="chapter-3" aria-labelledby="title-3"><header class="chapter-heading"><h2 id="title-3"><span class="chapter-ordinal">其三</span>日行千里</h2><p class="chapter-deck">千里单骑，洒洒水啦。</p></header><div class="chapter-body"><p>
-轩自言春节曾单日驱车三千，「这次国庆1200公里」，又补一句「我闭眼就是干」。
-崔西、油炸车厘子相继叹曰「马德轩厉害啊」；油炸车厘子又赠一号
-「马德轩你是神」「浙Aの神」。而轩唯淡淡四字：
-</p>
-<blockquote>
-「洒洒水啦。」
-<br>「我闭眼就是干。」
-<span class="who">—— 多芒，2026-09-23</span>
-</blockquote>
-<p>
-又轩之座驾已行三万公里，而车膜竟未撕。油炸车厘子发难曰：「3w公里膜都还没撕呢，马德轩。」
-轩答曰：「懒得撕。」「就让他丢那呆着了。」——其随性如此。
-</p></div></section>
-<section class="chapter chapter-4" id="chapter-4" aria-labelledby="title-4"><header class="chapter-heading"><h2 id="title-4"><span class="chapter-ordinal">其四</span>售后调教</h2><p class="chapter-deck">以诚待人，积分不问自来。</p></header><div class="chapter-body"><p>
-轩于售后之道，可谓独步群中。其自述「和售后关系处的好都好说其实」，
-又曰「我有事都是在售后群问的，里面售后还有技术主管都在的」「我这是专属售后服务群」。
-最得意者一句：
-</p>
-<blockquote>
-「好的售后会主动给你要积分，我都不用提，他们都给我要。」
-<span class="who">—— 多芒，2026-09-29</span>
-</blockquote>
-<p>
-油炸车厘子闻之，掷地有声：「全杭州的小鹏售后都被你调教完了。」轩谦让曰：
-「别闹，我就一个。」顿了顿，又添一句：「还有萧山。」
-</p>
-<p>
-越数日，江桥-820银终为之定号——<b>「售后调教师，马德轩」</b>。
-</p></div></section>
-<section class="chapter chapter-5" id="chapter-5" aria-labelledby="title-5"><header class="chapter-heading"><h2 id="title-5"><span class="chapter-ordinal">其五</span>战绩三则</h2><p class="chapter-deck">凡遇不平，必较真到底。</p></header><div class="chapter-body"><div class="case-file"><div class="case-file-heading"><span>战事</span><span>实录</span></div><div class="case"><div class="case-title"><span class="case-number">01</span><h3><b>踹车大妈</b><br><span>（2026-07）</span></h3></div><div class="case-body">
-      轩停车于路侧用餐，未及十分钟，一大妈以其碍事，抬脚便踹，<b>一脚踹凹三个面并及车灯</b>，定损二千余。
-      大妈宁可进去蹲数日亦不赔钱，只肯出五百。民警遂持轩之定损照片，遍访杭城小鹏4S店逐一核价；
-      轩因民警拖延，直举报西湖留下派出所，未及半个时辰，民警已至其门，轩「人傻了」。
-      后查得大妈三十余岁、与母相依、无业、户籍皖北村中，终只得一纸处罚单，令其起诉。
-      轩叹曰：「我现在根本不敢出险。」又自解曰：「我00后新手司机，再出我怕涨太离谱。」
-    </div></div><div class="case"><div class="case-title"><span class="case-number">02</span><h3><b>逆行电动车</b></h3></div><div class="case-body">
-      轩开 NGP 行于途中，一电动车逆行而来，轩撞之，<b>前铲撞出大窟窿</b>。
-      交警判对方主责、轩次责，盖以其「撞上时速度还是1」。
-      轩自评此事之奇：<b>「小p有事智驾还真不退，硬抗。」</b>
-      又曰：「上次撞到人了都没退出，还是我自己踩刹车退出的。」
-      所幸对方全担修车费，另赔二千余，轩曰「态度还算好」，遂不深究。
-    </div></div><div class="case"><div class="case-title"><span class="case-number">03</span><h3><b>实线变道</b></h3></div><div class="case-body">
-      周年活动归途，一网约车实线变道，轩「就给他撞了」，前铲得以<b>全部换新</b>。
-      及至十月八日取车，又自陈：「前铲就2600了」「自取因为修车迟到了」「被罚款了」「很不爽」。
-    </div></div></div></div></section>
-<section class="chapter chapter-6" id="chapter-6" aria-labelledby="title-6"><header class="chapter-heading"><h2 id="title-6"><span class="chapter-ordinal">其六</span>椰汁公案</h2><p class="chapter-deck">椰汁未至，江湖先起波澜。</p></header><div class="chapter-body"><p>
-十月八日未时，群中方议论充电、异响、轨迹诸事，忽有柠薇-702-新月银者，径呼其名：
-</p>
-<blockquote>
-「马德轩我的椰汁在哪」<span class="who">—— 柠薇-702-新月银-0824</span>
-</blockquote>
-<p>
-一言既出，胸针zzz、L-702绿、盼-前驱702相继响应，「马德轩我的椰汁在哪」瞬间刷屏。
-橙子-702银笑曰：「马德轩是椰树吗，都问他要椰汁。」
-</p>
-<p>
-轩彼时方在余杭4S店候车，答曰「外观还可以」「在余杭4s店」。柠薇催之「啥时候还给我」，
-L-702绿补刀「马上还你」。至夜，柠薇再问「马德轩呢我的椰汁呢」，见其久不应，
-遂断定：<b>「马德轩装高冷是吧。」</b> 江桥-820银、JUENIKO-750-红牛随声附和，
-后者更作史笔，号之曰<b>「马德轩装高冷事件」</b>，又赠一号<b>「通宵的神　马德轩」</b>。
-</p>
-<p>
-轩于半炷香后方出，唯余四字：「在家联公寓」「在忙呀」，又补一句「他娘的上班呢」。
-柠薇追之愈急：「我等着喝呢」「这啥，去吊死在他店门口」——上吊之典，至此已成群中通用兵器。
-</p></div></section>
-<section class="chapter chapter-7" id="chapter-7" aria-labelledby="title-7"><header class="chapter-heading"><h2 id="title-7"><span class="chapter-ordinal">其七</span>论曰</h2><p class="chapter-deck">外贫而内直，好争而不记仇。</p></header><div class="chapter-body"><div class="ping">
-  <div class="t">评</div>
-  <p>
-  观马德轩之为人，其可笑处，恰是其可爱处。一句戏言，反被自家门牌出卖，
-  是为<b>钝</b>；一张截图，竟成举群典故，是为<b>达</b>。为滇西三载之客，
-  故能指点江山如数家珍；为三千公里之驾，故敢言「闭眼就是干」。
-  </p>
-  <p>
-  然其性中自有刚者：大妈踹车宁可坐牢亦不赔，则奔走派出所、举报留痕，终不肯自认倒霉；
-  电动车逆行致其受损，则据理力争，一分不让；唯于赔偿到手之后，反不问前嫌，
-  一句「态度还算好」便揭过。是<b>外贫而内直，好争而不记仇</b>者也。
-  </p>
-  <p>
-  至若售后之「调教」，非能仗势也，乃以诚待人之效；积分不问自来，非有特权也，
-  乃「和售后关系处的好」之果。以此观之，轩之受群友爱重，非独以其谐，亦以其诚。
-  </p>
-  <p>
-  古人云：「人无癖不可与交，以其无深情也。」轩有癖：癖在滇西山川，癖在千里单骑，
-  癖在一张不肯撕掉的车膜。有此癖者，可交也。
-  </p>
-</div></div></section>
-<section class="appendix" id="voices-1" aria-labelledby="title-8"><h2 id="title-8"><span>附录</span>群友语录</h2><div class="card">
-<p class="noind">
-<b>「马德轩　真有你的！」</b>　—— 群友连刷三十余条<br>
-<b>「马德轩是个人物」</b>　—— Levi 林林羽 702流萤小鸟7821<br>
-<b>「以后马某轩就是实名上网了，在我们这个群」</b>　—— 崔西-702紫 1995<br>
-<b>「马德轩是谁？」「上面跳舞的奶牛。」</b>　—— 开攻城狮的P7-702银 / 崔西-702紫<br>
-<b>「马德轩你是神」「浙Aの神」</b>　—— 油炸车厘子702 心寒绿 1134<br>
-<b>「全杭州的小鹏售后都被你调教完了」</b>　—— 油炸车厘子702 心寒绿 1134<br>
-<b>「售后调教师，马德轩」</b>　—— 江桥-820 银-8873<br>
-<b>「通宵的神　马德轩」</b>　—— JUENIKO-750-红牛-0201<br>
-<b>「马德轩装高冷事件」</b>　—— JUENIKO-750-红牛-0201<br>
-<b>「马德轩已经是个名人了」</b>　—— 油炸车厘子702 心寒绿 1134<br>
-<b>「马德轩，牛逼克拉斯」</b>　—— 凌子<br>
-<b>「马德轩我的椰汁在哪」</b>　—— 柠薇 / 胸针zzz / L-702绿 / 盼-前驱702 / 💦-702银<br>
-<b>「马德轩是椰树吗，都问他要椰汁」</b>　—— 橙子-702银-8516<br>
-<b>「马车CP」</b>　—— 崔西-702紫 1995<br>
-<b>「：马德轩！！！：车厘子！！！：德轩！！！：厘子！！！：轩！！！：子！！！」</b>　—— 盼-前驱702-银色-3328<br>
-<b>「马德轩 来一根」</b>　—— 彬 / 开攻城狮 / 油炸车厘子（连呼三次）<br>
-<b>「马德轩有这么帅吗」</b>　—— 橙子-702银-8516<br>
-<b>「3w公里膜都还没撕呢　马德轩」</b>　—— 油炸车厘子702 心寒绿 1134
-</p>
-</div></section>
-<section class="appendix" id="voices-2" aria-labelledby="title-9"><h2 id="title-9"><span>附录</span>马德轩原声</h2><div class="card">
-<p class="noind">
-<b>「洒洒水啦。」</b><br>
-<b>「我闭眼就是干。」</b><br>
-<b>「不推去余杭门店上吊。」</b><br>
-<b>「升级高级专员。」</b><br>
-<b>「早知道截掉了。」</b><br>
-<b>「我现在根本不敢出险。」</b><br>
-<b>「我00后新手司机，再出我怕涨太离谱。」</b><br>
-<b>「小p有事智驾还真不退，硬抗。」</b><br>
-<b>「好的售后会主动给你要积分，我都不用提。」</b><br>
-<b>「别闹，我就一个……还有萧山。」</b><br>
-<b>「云南我只推荐丽江迪庆德宏和腾冲，其他可以推沟里。」</b><br>
-<b>「如听仙乐耳暂明。」</b><br>
-<b>「我直接给到一个夯可。」</b><br>
-<b>「懒得撕。」「就让他丢那呆着了。」</b><br>
-<b>「傻鸟汽车。」</b><br>
-<b>「建议无效，没有米米。」</b><br>
-<b>「他娘的上班呢。」</b>
-</p>
-</div></section></article></div>
-    <section class="quote-stage" aria-labelledby="quote-stage-title"><div class="quote-stage-top"><h2 id="quote-stage-title">闻其声，见其人。</h2><span>马德轩 · 原声摘录</span></div><div class="featured-quote" id="featured-quote" aria-live="polite" aria-atomic="true"><span class="quote-mark" aria-hidden="true">“</span><blockquote><p id="quote-text">早知道截掉了。</p><cite id="quote-source">多芒 · 实名上网</cite></blockquote></div><div class="quote-stage-bottom"><span id="quote-count">01 / 05</span><div class="quote-controls"><button id="quote-prev" aria-label="上一句语录">←</button><button id="quote-next" aria-label="下一句语录">→</button></div></div></section>
-  </main>
-  <footer class="site-footer"><a class="footer-title" href="#top">马德轩<span>小传</span><span class="footer-arrow" aria-hidden="true">↗</span></a><div class="footer-bottom"><p>
-本传据「杭州THE NEXT P7车友会」群聊实录（2025-11-25 ~ 2026-10-09）整理，
-凡引语、事件均出自群内公开对话与原图，未作虚构。<br>
-仅供群友娱乐，不构成对任何个人的评价，请勿外传。
-</p><span class="footer-seal" aria-hidden="true">据实而录<br>诸君一笑</span></div></footer>
-  <a class="back-top" id="back-top" href="#top" aria-label="回到顶部" hidden>↑</a>
-  <script>(() => {
-  'use strict';
-  const reduceQuery = matchMedia('(prefers-reduced-motion: reduce)');
-  const fineQuery = matchMedia('(hover: hover) and (pointer: fine)');
-  const menu = document.getElementById('chapter-menu');
-  const toggle = document.getElementById('menu-toggle');
-  const scrim = document.getElementById('menu-scrim');
-  let returnFocus = null;
 
-  function setMenu(open) {
-    if (open) returnFocus = document.activeElement;
-    menu.hidden = !open;
-    scrim.hidden = !open;
-    toggle.setAttribute('aria-expanded', String(open));
-    if (open) {
-      if (!reduceQuery.matches) menu.animate([{ transform: 'translateX(100%)' }, { transform: 'translateX(0)' }], { duration: 400, easing: 'cubic-bezier(.16,1,.3,1)' });
-      document.getElementById('menu-close').focus({ preventScroll: true });
-    } else if (returnFocus && document.contains(returnFocus)) {
-      returnFocus.focus({ preventScroll: true });
-    }
-  }
-  toggle.addEventListener('click', () => setMenu(menu.hidden));
-  scrim.addEventListener('click', () => setMenu(false));
-  document.getElementById('menu-close').addEventListener('click', () => setMenu(false));
-  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
-  document.addEventListener('keydown', event => {
-    if (menu.hidden) return;
-    if (event.key === 'Escape') { event.preventDefault(); setMenu(false); }
-    if (event.key === 'Tab') {
-      const controls = [toggle, ...menu.querySelectorAll('button, a[href]')];
-      const first = controls[0], last = controls[controls.length - 1];
-      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
-      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
-    }
-  });
+<div class="note">
+<b>关于数据可靠性的说明：</b>本报告全部数据来自群友自行晒出的保单、报价单截图和聊天记录，
+金额为个人实际成交/报价，不是官方费率表。涉及具体个人的均为群内公开讨论内容，
+车牌、姓名等已在图片中自然出现，本报告仅作归纳，不对个人做任何评价。
+</div>
 
-  const art = document.getElementById('cover-art');
-  const landscape = document.getElementById('landscape');
-  let pointerFrame = 0;
-  art.addEventListener('pointermove', event => {
-    if (reduceQuery.matches || !fineQuery.matches) return;
-    if (pointerFrame) cancelAnimationFrame(pointerFrame);
-    pointerFrame = requestAnimationFrame(() => {
-      const rect = art.getBoundingClientRect();
-      landscape.style.setProperty('--ry', `${((event.clientX - rect.left) / rect.width - .5) * 9}deg`);
-      landscape.style.setProperty('--rx', `${-((event.clientY - rect.top) / rect.height - .5) * 7}deg`);
-      pointerFrame = 0;
-    });
-  });
-  function resetArt() {
-    if (pointerFrame) cancelAnimationFrame(pointerFrame);
-    pointerFrame = 0;
-    landscape.style.setProperty('--rx', '0deg');
-    landscape.style.setProperty('--ry', '0deg');
-  }
-  art.addEventListener('pointerleave', resetArt);
-  reduceQuery.addEventListener('change', resetArt);
-  fineQuery.addEventListener('change', resetArt);
+<h2 id="claims">一、出事故后，到底走不走商业险</h2>
 
-  const chapters = [...document.querySelectorAll('.chapter')];
-  const chapterLinks = [...document.querySelectorAll('[data-chapter]')];
-  const fill = document.getElementById('progress-fill');
-  const backTop = document.getElementById('back-top');
-  let scrollFrame = 0;
-  function updateReading() {
-    const total = document.documentElement.scrollHeight - innerHeight;
-    fill.style.transform = `scaleX(${total > 0 ? Math.min(1, Math.max(0, scrollY / total)) : 0})`;
-    backTop.hidden = scrollY < 900;
-    const threshold = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) + 90;
-    let active = null;
-    for (const chapter of chapters) {
-      if (chapter.getBoundingClientRect().top <= threshold) active = chapter;
-      else break;
-    }
-    chapterLinks.forEach(link => {
-      const selected = active !== null && link.hash === '#' + active.id;
-      link.classList.toggle('active', selected);
-      if (selected) link.setAttribute('aria-current', 'location');
-      else link.removeAttribute('aria-current');
-    });
-    scrollFrame = 0;
-  }
-  function scheduleReading() { if (!scrollFrame) scrollFrame = requestAnimationFrame(updateReading); }
-  addEventListener('scroll', scheduleReading, { passive: true });
-  addEventListener('resize', scheduleReading, { passive: true });
-  updateReading();
+<h3>1.1 核心规则：2000 元分界线</h3>
+<p>群里被反复引用、也是实际操作的依据是交强险的财产损失赔偿限额：</p>
+<div class="key">
+  <b>交强险最多赔 2000 元（财产损失）。</b>
+  <br>· 定损 ≤2000 → 走交强险即可（不影响商业险折扣），或直接私了
+  <br>· 定损 &gt;2000 → 超出部分必须走商业险（车损险/三者险）
+  <br>· 交强险<b>不赔自己的车</b>，单方事故只能走车损险或自费
+</div>
+<p class="src">原话出处：小赵-702黑色 "交强险最多赔2000" / "2000以上他要走商业险"；
+JUENIKO-750-红牛 "不能。交强险不管修自己的车。"；Eason-702银 "先定损，超过2000走商业"。</p>
 
-  const quotes = [
-    ['早知道截掉了。', '多芒 · 实名上网'],
-    ['洒洒水啦。', '多芒 · 日行千里'],
-    ['别闹，我就一个……还有萧山。', '多芒 · 售后调教'],
-    ['懒得撕。', '多芒 · 三万公里，车膜未撕'],
-    ['他娘的上班呢。', '多芒 · 椰汁公案']
-  ];
-  let quoteIndex = 0;
-  const quote = document.getElementById('featured-quote');
-  let quoteAnimation = null;
-  function showQuote(delta) {
-    quoteIndex = (quoteIndex + delta + quotes.length) % quotes.length;
-    if (quoteAnimation) quoteAnimation.cancel();
-    document.getElementById('quote-text').textContent = quotes[quoteIndex][0];
-    document.getElementById('quote-source').textContent = quotes[quoteIndex][1];
-    document.getElementById('quote-count').textContent = `${String(quoteIndex + 1).padStart(2, '0')} / ${String(quotes.length).padStart(2, '0')}`;
-    if (!reduceQuery.matches) quoteAnimation = quote.animate([{ opacity: .2, transform: 'translateY(12px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 480, easing: 'cubic-bezier(.16,1,.3,1)' });
-  }
-  document.getElementById('quote-prev').addEventListener('click', () => showQuote(-1));
-  document.getElementById('quote-next').addEventListener('click', () => showQuote(1));
-  reduceQuery.addEventListener('change', () => { if (reduceQuery.matches && quoteAnimation) quoteAnimation.cancel(); });
-})();
-</script>
-</body>
-</html>
+<h3>1.2 群友总结出的三条取舍原则</h3>
+<div class="scroll">
+<table>
+  <tr><th style="width:22%">情形</th><th style="width:26%">群内主流做法</th><th>理由与原话</th></tr>
+  <tr>
+    <td>小磕碰、金额几百到一两千</td>
+    <td><b>不走保险，自费修</b></td>
+    <td>"金额少，占次数"（💦-702银）。很多人攒着不修，"等有缘人撞上来，对方全责一起修"（丁丁丁-750银）</td>
+  </tr>
+  <tr>
+    <td>定损 2000 以上</td>
+    <td><b>走商业险</b></td>
+    <td>自费性价比极低；且单次出险只是损失折扣，不会暴涨</td>
+  </tr>
+  <tr>
+    <td>对方全责 / 对方有交强险</td>
+    <td><b>走对方保险</b>，自己不动保险</td>
+    <td>"走她的保险赔了我800"（suzume-702绿）；对方只有交强险时称其为"交强险战士"</td>
+  </tr>
+  <tr>
+    <td>肇事逃逸 / 对方耍赖</td>
+    <td><b>不接受调解，走逃逸流程</b></td>
+    <td>南河-702红：对方定损1800反悔 → 判定肇事逃逸"保险一毛钱赔不了"，自己掏1800赔款 + 罚200记6分</td>
+  </tr>
+</table>
+</div>
+
+<h3>1.3 出险一次到底涨多少——群里最容易被误解的点</h3>
+<div class="card">
+<p><b>误区：</b>"出一次险第二年保费就跟你原来一样" → 实际是<b>取消折扣</b>，不是回到首年原价。</p>
+<p><b>群里给出的正确口径（11-702-银5137）：</b></p>
+<p style="margin-left:14px;border-left:3px solid var(--line);padding-left:14px;color:#38445c">
+"我们第一年 8k 的保险，不出险第二年续保是 5k，但是修了这一次，第二年续保得 7k。<br>
+'涨价'对标的是原本续保价，如果对标第一年的保费，那也太扯了吧。"
+</p>
+<p><b>JUENIKO-750-红牛 的完整表述：</b></p>
+<p style="margin-left:14px;border-left:3px solid var(--line);padding-left:14px;color:#38445c">
+"单次出险基本就是取消保费折扣，不会涨得太夸张，一般连续多次出险才会触发拒保。"
+</p>
+<div class="key">
+<b>结论：</b>出险 1 次的代价 ≈ 少省 2000 元左右（"优惠幅度被吃掉"），<b>而不是</b>多付一整年的钱。
+所以判断标准仍然是 §1.1 的 2000 元分界线——<b>定损明显超过 2000 就该走保险</b>，
+因为一次出险的隐性成本大约就是 2000 元。
+</div>
+</div>
+
+<figure>
+  <div class="source-unavailable"><span>原始图片暂缺</span><small>该图原件未随报告提供，原图注保留如下。</small></div>
+  <figcaption>群友晒出的「以首年 5000 元商业险为例」出险次数 × 保费对照表（2026-06-11）</figcaption>
+</figure>
+
+<h2 id="premiums">二、保费额度与出险记录</h2>
+
+<h3>2.1 最完整的一份：人保官方报价单（702 版，出险 1 次）</h3>
+<figure>
+  <div class="source-unavailable"><span>原始图片暂缺</span><small>该图原件未随报告提供，原图注保留如下。</small></div>
+  <figcaption>中国人民保险报价单（2026-08-11，群友 许伟明-702黄 晒出），可直接读出关键字段</figcaption>
+</figure>
+<div class="scroll">
+<table>
+  <tr><th>关键字段</th><th>数值</th><th>说明</th></tr>
+  <tr><td>车辆型号</td><td><b>小鹏 NHQ7002BEVEA 纯电动轿车</b></td><td>A01-客车 / 21-家庭自用</td></tr>
+  <tr><td>新车购置价</td><td class="num">219,800 元</td><td>对应 702 长续航版指导价 21.98 万</td></tr>
+  <tr><td>初登日期</td><td>2025-09-10</td><td>车龄 1 年，车损险保额折旧后 200,809 元</td></tr>
+  <tr><td><b>出险记录</b></td><td class="hi">商业险连续承保期间出险 1 次；交强险 0 次</td><td>直接决定 NCD 折扣</td></tr>
+  <tr><td>新能源汽车损失保险</td><td class="num">保额 200,809 → 保费 3,490.36</td><td>占比最大，约 59%</td></tr>
+  <tr><td>新能源第三者责任险</td><td class="num">保额 300 万 → 保费 1,995.11</td><td>第二大项</td></tr>
+  <tr><td>车上人员（司机 / 乘客）</td><td class="num">2 万 / 2 万×4 座 → 62.41 + 158.35</td><td></td></tr>
+  <tr><td>附加医保外医疗（三责）</td><td class="num">30 万 → 90.00</td><td></td></tr>
+  <tr><td>附加外部电网故障损失险</td><td class="num">→ 101.29</td><td>群友公认"必加"项</td></tr>
+  <tr><td>商业车险合计</td><td class="num">5,897.52 元</td><td></td></tr>
+  <tr><td>交强险</td><td class="num">855.00 元</td><td>浙江地区标准价</td></tr>
+  <tr><td>驾乘人员补充综合保险</td><td class="num">469.00 元</td><td>非车险</td></tr>
+  <tr><td><b>保费合计</b></td><td class="num hi">7,221.52 元</td><td>含车船税 0</td></tr>
+</table>
+</div>
+<p class="src">注意：免费附加项（道路救援 2 次、车辆安全检测 1 次、代为驾驶 1 次、代为送检 1 次）算在商业险里但不加价，属于保险公司的主打卖点。</p>
+
+<h3>2.2 同款车型、不同报价：商业险差 887 元</h3>
+<p>同一天（2026-08-11）、同车损保额（200,809 元）的另一份报价，商业险只有 5,010.07 元，
+合计 6,334.07 元，比上面那份便宜 <b class="lo">887.45 元</b>。</p>
+<figure>
+  <div class="source-unavailable"><span>原始图片暂缺</span><small>该图原件未随报告提供，原图注保留如下。</small></div>
+  <figcaption>同车损保额、不同公司/不同出险口径的另一份报价（2026-08-11，群友 jagger-702绿 晒出，配文"好贵啊"）</figcaption>
+</figure>
+<div class="note">
+<b>这 887 元差在哪：</b>两份报价的保额、险种组合几乎完全一致，唯一实质差异是<b>出险记录口径</b>——
+带"出险 1 次"的那份各险别保费全面上浮（车损 3490 vs 2965、三者 1995 vs 1695），
+这正好量化了"出险一次"在这款车上的价格：<b class="hi">约 880～1000 元的商业险溢价</b>。
+</div>
+
+<h3>2.3 750 四驱版的保障明细（三者 500 万）</h3>
+<div class="grid2">
+<figure style="margin:0">
+  <div class="source-unavailable"><span>原始图片暂缺</span><small>该图原件未随报告提供，原图注保留如下。</small></div>
+  <figcaption>750 四驱版保障明细（2026-07-08）</figcaption>
+</figure>
+<div class="card" style="margin:0">
+<p><b>保费构成（JUENIKO-750-红牛）：</b></p>
+<div class="scroll"><table style="font-size:13px">
+<tr><th>险别</th><th>保额</th><th>保费</th></tr>
+<tr><td>机动车损失险</td><td class="num">25.88 万</td><td class="num">4,956</td></tr>
+<tr><td>第三者责任险</td><td class="num">500 万</td><td class="num">2,483</td></tr>
+<tr><td>座位险（乘客）</td><td class="num">3 万</td><td class="num">231</td></tr>
+<tr><td>座位险（司机）</td><td class="num">3 万</td><td class="num">91</td></tr>
+<tr><td>外部电网故障</td><td class="num">—</td><td class="num">120</td></tr>
+<tr><td>医保外用药</td><td class="num">5 万</td><td class="num">67</td></tr>
+<tr><td><b>商业险小计</b></td><td></td><td class="num"><b>7,949.11</b></td></tr>
+<tr><td>交强险</td><td></td><td class="num">950.00</td></tr>
+<tr><td>如意行驾乘综合</td><td></td><td class="num">588.00</td></tr>
+<tr><td><b>合计</b></td><td></td><td class="num hi"><b>9,487.11</b></td></tr>
+</table></div>
+<p class="src">对比 702 版：车损保额高 5 万、三者高 200 万，合计贵约 2,265 元。</p>
+</div>
+</div>
+
+<h3>2.4 群内保费全景（按群友自述汇总）</h3>
+<div class="scroll">
+<table>
+  <tr><th>群内昵称</th><th>版本</th><th>年度</th><th>出险</th><th>违章</th><th>保费（元）</th><th>备注</th></tr>
+  <tr><td>小胡-702银 / 丁丁丁-750银</td><td>702 / 750</td><td>首年</td><td>—</td><td>—</td><td class="num">5,900</td><td>群内最低档</td></tr>
+  <tr><td>jagger-702绿 / 安-702黑</td><td>702</td><td>首年</td><td>—</td><td>—</td><td class="num">6,900 ~ 7,000</td><td></td></tr>
+  <tr><td>崔西-702紫</td><td>702</td><td>首年</td><td>—</td><td>—</td><td class="num">7,000+</td><td>"我是7K多"</td></tr>
+  <tr><td>面条-702黑</td><td>702</td><td>首年</td><td>—</td><td>—</td><td class="num">7,750</td><td></td></tr>
+  <tr><td>MadZz丷-702紫</td><td>702</td><td>首年</td><td>—</td><td>—</td><td class="num">8,900</td><td>被群友质疑"702不是首发还8900？"</td></tr>
+  <tr><td>L-鹏翼版-银</td><td>鹏翼版</td><td>首年</td><td>—</td><td>—</td><td class="num">9,300</td><td>"车价高，车损险就上去了"</td></tr>
+  <tr><td>JUENIKO-750-红牛</td><td>750 四驱</td><td>续保</td><td>—</td><td>—</td><td class="num">9,487</td><td>三者 500 万</td></tr>
+  <tr><td><b>许伟明-702-黄</b></td><td>702</td><td>续保</td><td class="hi">1 次</td><td>—</td><td class="num hi">7,221.52</td><td>人保官方报价单</td></tr>
+  <tr><td>jagger-702绿</td><td>702</td><td>续保</td><td>—</td><td>—</td><td class="num">6,334.07</td><td>同车损保额对照件</td></tr>
+  <tr><td>热心市民-702银</td><td>702</td><td>续保</td><td>—</td><td>—</td><td class="num">6,900 / 7,000+</td><td>平安 6,900（含约 200 折扣）/ 人保 7,000 零几十</td></tr>
+  <tr><td>斌bin-702银</td><td>702</td><td>续保</td><td>—</td><td>—</td><td class="num">6,700</td><td>另返 500 元购物卡</td></tr>
+  <tr><td>寂-702-黄</td><td>702</td><td>续保</td><td>1 次</td><td>—</td><td class="num">6,116</td><td>同期无出险约 5,500</td></tr>
+  <tr><td>橙子-702银</td><td>702</td><td>续保</td><td>1 次（3,600）</td><td>0</td><td class="num">6,050</td><td>比去年便宜 1,600，另送保养/一面漆</td></tr>
+  <tr><td>开攻城狮的P7-702银</td><td>702</td><td>续保</td><td>0</td><td>—</td><td class="num lo">约 5,000</td><td>返 300；"保险一般有 5%~15% 返点"</td></tr>
+  <tr><td>小能猫-702银</td><td>702</td><td>续保</td><td>0</td><td>—</td><td class="num lo">约 5,000</td><td>"杭州续保无出险基本都在 5000 左右"</td></tr>
+  <tr><td>萧山702银</td><td>702</td><td>续保</td><td>0</td><td>—</td><td class="num lo">降 1,000+</td><td>平安报价</td></tr>
+  <tr><td>果茶-750-绿</td><td>750</td><td>续保</td><td>—</td><td>—</td><td class="num lo">减 2,200</td><td></td></tr>
+  <tr><td>chao-702银</td><td>702</td><td>续保</td><td>—</td><td class="hi">2 次</td><td class="num hi">高于出险车</td><td>"说我风险评分太高了，保费比出险的还贵"</td></tr>
+</table>
+</div>
+
+<div class="key">
+<b>从这张表能读出的三条规律：</b>
+<ol style="margin-bottom:0">
+  <li><b>无出险是最大红利：</b>无出险续保普遍 5,000 元上下，比首年中位数（约 7,000～7,800）低 2,000～2,800 元，降幅约 30%。</li>
+  <li><b>出险 1 次的代价约 1,000～2,200 元：</b>寂 6,116 vs 同期无出险约 5,500；橙子出险 3,600 后仍比首年降 1,600（说明降幅被吃掉约 1,600）；人保报价单口径约 880～1,000。</li>
+  <li><b>违章可能比出险更贵：</b>chao-702银 违章 2 次，报价高于出险车——这是本报告最反直觉、也最值得重视的一条。</li>
+</ol>
+</div>
+
+<h3>2.5 保险公司的折扣规则（群友晒出的官方口径）</h3>
+<figure>
+  <div class="source-unavailable"><span>原始图片暂缺</span><small>该图原件未随报告提供，原图注保留如下。</small></div>
+  <figcaption>保险公司「保费浮动小贴士」：商业险折扣与近三年出险记录对照（追溯过去三年投保情况、出险记录）</figcaption>
+</figure>
+<div class="scroll">
+<table>
+  <tr><th>历史记录（近三年累计赔案）</th><th>商业险折扣</th></tr>
+  <tr><td>1 年 6 赔 / 2 年 7 赔 / 3 年 8 赔</td><td class="num hi">上涨 100%</td></tr>
+  <tr><td>1 年 5 赔 / 2 年 6 赔 / 3 年 7 赔</td><td class="num hi">上涨 80%</td></tr>
+  <tr><td>1 年 4 赔 / 2 年 5 赔 / 3 年 6 赔</td><td class="num hi">上涨 60%</td></tr>
+  <tr><td>1 年 3 赔 / 2 年 4 赔 / 3 年 5 赔</td><td class="num hi">上涨 40%</td></tr>
+  <tr><td>1 年 2 赔 / 2 年 3 赔 / 3 年 4 赔</td><td class="num hi">上涨 20%</td></tr>
+  <tr><td><b>新保 / 1 年 1 赔 / 2 年 2 赔 / 3 年 3 赔</b></td><td class="num"><b>恢复原价（无折扣）</b></td></tr>
+  <tr><td>1 年 0 赔 / 2 年 1 赔 / 3 年 2 赔</td><td class="num lo">8 折</td></tr>
+  <tr><td>连续 2 年 0 赔 / 3 年 1 赔</td><td class="num lo">7 折</td></tr>
+  <tr><td>连续 3 年 0 赔</td><td class="num lo">6 折</td></tr>
+  <tr><td><b>连续 4 年及以上 0 赔</b></td><td class="num lo"><b>5 折</b></td></tr>
+</table>
+</div>
+<p class="src">这张表精确解释了 §1.3 的结论："出险 1 次"= 从"1 年 0 赔的 8 折"掉回"恢复原价"，
+在 5,000 元基准上正好差 1,000 元；若原本已连续多年 0 赔，掉档损失更大。</p>
+
+<h3>2.6 另一个参考坐标：老款车型的保单</h3>
+<p>群里还晒了一份车损保额 20.08 万的老款车保单（商业险合计 4,245.59 / 交强 855 / 非车险 508 / 合计 5,608.59 元），
+与 702 新版同车损保额报价（5,010.07 / 6,334.07）对比可见：
+<b>同一车损保额下，不同公司、不同年款的报价可以差出 700～1,100 元</b>。</p>
+<figure>
+  <div class="source-unavailable"><span>原始图片暂缺</span><small>该图原件未随报告提供，原图注保留如下。</small></div>
+  <figcaption>车损保额 20.08 万的老款保单（2026-08-06）</figcaption>
+</figure>
+
+<h2 id="violations">三、违规情况（图片识别提取）</h2>
+
+<h3>3.1 已识别的违法记录</h3>
+<div class="scroll">
+<table>
+  <tr><th>时间</th><th>车牌</th><th>违法行为</th><th>地点</th><th>处理结果</th><th>来源</th></tr>
+  <tr>
+    <td>2026-08-18 22:58</td><td>—</td>
+    <td>机动车通过有灯控路口时，不按所需行进方向驶入导向车道</td>
+    <td>浙江宁波 滨海一路-金源大道北口</td>
+    <td><b class="lo">首违警告 · 罚款 0 元 · 记 0 分</b></td>
+    <td>违法处理截图</td>
+  </tr>
+  <tr>
+    <td>2026-09-04 19:49</td><td>浙AES8516</td>
+    <td>机动车违反规定停放，驾驶人不在现场或虽在现场…</td>
+    <td>临平-星桥北路_星桥北路东港路</td>
+    <td>已处理（该车还可处理 11 分）</td>
+    <td>违法处理截图</td>
+  </tr>
+  <tr>
+    <td>2026-06 期间</td><td>—</td>
+    <td>超速（多笔，群友称"全是超速"）</td>
+    <td>杭州临平</td>
+    <td>已开具公安交通管理简易程序处罚决定书</td>
+    <td>处罚决定书截图</td>
+  </tr>
+  <tr>
+    <td>2026-09</td><td>—</td>
+    <td>超速（警告）</td><td>—</td><td>仅警告，未罚款</td>
+    <td>聊天记录</td>
+  </tr>
+</table>
+</div>
+
+<div class="grid2">
+<figure style="margin:0">
+  <div class="source-unavailable"><span>原始图片暂缺</span><small>该图原件未随报告提供，原图注保留如下。</small></div>
+  <figcaption>违法处理截图：不按导向车道行驶 → 首违警告（罚款 0 元 记 0 分）</figcaption>
+</figure>
+<figure style="margin:0">
+  <div class="source-unavailable"><span>原始图片暂缺</span><small>该图原件未随报告提供，原图注保留如下。</small></div>
+  <figcaption>违法处理截图：浙AES8516 违停，2026-09-04，已处理</figcaption>
+</figure>
+</div>
+
+<h3>3.2 群内提及的其他违章与罚款标准</h3>
+<div class="scroll">
+<table>
+  <tr><th>情形</th><th>处罚</th><th>出处</th></tr>
+  <tr><td>闯红灯</td><td><b>记 6 分</b></td><td>木几啊-702银 "前几天闯一次红灯6分"</td></tr>
+  <tr><td>占用应急车道</td><td><b>记 6 分</b></td><td>太阳750银 "应急车道6分好像是"</td></tr>
+  <tr><td>肇事逃逸</td><td><b>罚款 200 元 + 记 6 分</b>，且保险公司拒赔</td><td>南河-702红 "200块6分"、"保险一毛钱赔不了"</td></tr>
+  <tr><td>超速 10% 以内</td><td>不处罚（交警给 10% 容错）</td><td>小赵-702黑 "交警会给你一个百分之十的容错"</td></tr>
+  <tr><td>超速 10%～20%</td><td>警告为主，"顶多罚两百不扣分"</td><td>小陈-750银 / 太阳750银</td></tr>
+  <tr><td>超速 20% 以上</td><td><b>罚款</b></td><td>小陈-750银 "20%以上才是罚款"</td></tr>
+  <tr><td>违停（短信提醒后驶离）</td><td>仍可能被罚；部分情形 12123 显示记录但不扣分不罚款</td><td>橙子-702银</td></tr>
+  <tr><td>累计记分</td><td>满 12 分吊销驾驶证</td><td>胸针zzz-702两驱 "你扣了12分不就吊销啦"</td></tr>
+</table>
+</div>
+<div class="note">
+<b>特别提示：</b>本报告中的违法记录来自群友自行晒出的截图，属个人行为记录，
+<b>与"这款车型"的保费定价无直接因果关系</b>。它们影响的是<b>具体车主个人</b>的保费
+（通过"交通违法系数"进入报价）。下表 4.3 会说明这条链路。
+</div>
+
+<h2 id="pricing">四、保险公司是怎么给这款车定价的</h2>
+
+<h3>4.1 群友给出的核心公式</h3>
+<div class="formula">商业险保费 ＝ 基准保费 × NCD系数（无赔款优待） × 保险公司自主定价系数 × 交通违法系数</div>
+<p class="src">出处：JUENIKO-750-红牛，2026-07-28。这条公式是理解后面所有现象的钥匙。</p>
+
+<p>把它拆到这款车上，四个乘数分别由不同因素决定：</p>
+
+<div class="scroll">
+<table>
+  <tr><th style="width:17%">乘数</th><th style="width:33%">在这款车上的实际决定因素</th><th>群内证据</th></tr>
+  <tr>
+    <td><b>基准保费</b></td>
+    <td><b>车型维度</b>：车价 → 车损险保额；车型零整比 → 维修工时与配件单价；
+        保险公司对该车型的赔付经验 → 车型风险等级</td>
+    <td>"车价高，车损险就上去了"（L-鹏翼版）；"保险员说小鹏和小米一样危险指数最高"（保险员原话）；
+        "让交强险战士看一下小鹏新P7的零整比"</td>
+  </tr>
+  <tr>
+    <td><b>NCD 系数</b></td>
+    <td><b>个人维度</b>：近三年累计赔案次数。0 赔 8 折 → 连续 4 年 0 赔 5 折；
+        1 赔即恢复原价。见 §2.5 官方折扣表</td>
+    <td>"保险都知道你前一年出险次数的"（L-鹏翼版）；
+        "保险只看出现次数"（太阳750银，转述保险销售）；
+        "1年0赔8折…连续4年0赔5折"</td>
+  </tr>
+  <tr>
+    <td><b>自主定价系数</b></td>
+    <td><b>公司与渠道维度</b>：同车同保额，各公司报价可差数百到上千元；
+        同一公司不同时间、不同业务员报价也不同</td>
+    <td>同车损保额同日两份报价差 887 元（§2.2）；
+        "续个保险烦死了 各种套路"（江桥-820银）；
+        "保险一般会有 5%～15% 的返点"</td>
+  </tr>
+  <tr>
+    <td><b>交通违法系数</b></td>
+    <td><b>个人维度</b>：违章次数/严重程度。多次违章会拉高"风险评分"，
+        效果可能超过一次出险</td>
+    <td>"违章过两次 说我风险评分太高了 保费比出险的还贵"（chao-702银，<b>本次调研最反直觉的发现</b>）；
+        "违章多是要涨的"；"违章多，开车习惯不会，风险系数就会高"</td>
+  </tr>
+</table>
+</div>
+
+<h3>4.2 除公式之外，群里实测到的其他影响因素</h3>
+<div class="scroll">
+<table>
+  <tr><th style="width:24%">因素</th><th>群内观察</th></tr>
+  <tr><td>地区</td><td>"宁波的保费高，是因为上次冰雹砸的"（____）；"杭州保险便宜"（AnDaoAi-Z）；同一车不同城市报价不同</td></tr>
+  <tr><td>年龄 / 驾龄</td><td>"年龄 驾龄 出险 违章 具体只有保险公司后台可以看到"；"他们说保险看年龄"</td></tr>
+  <tr><td>年行驶里程</td><td>"一般就公里数，违章，年龄这些"；"我公里数少"</td></tr>
+  <tr><td>车龄与折旧</td><td>车损险保额随车龄下降：新车 21.98 万 → 一年后保额 20.08 万</td></tr>
+  <tr><td>三者保额选择</td><td>300 万 ↔ 500 万差价约 500～1,000 元；<b>并非保额越高越贵</b>——"我今年保险三者300万反而比400万更贵"（江桥-820银）</td></tr>
+  <tr><td>险种组合</td><td>网上投保最易踩坑："我上次微信买保险给我报价2000多，一看是没有车损"（江桥-820银）</td></tr>
+  <tr><td>续保 vs 转保</td><td>"没出险的话直接续貌似最便宜"；"我第一年是大地，转保反而贵，所以就继续保了大地"</td></tr>
+  <tr><td>承保公司</td><td>群内口碑：平安索赔快程序简单；人保"有点高冷，续保都没人加我"；太平洋"直接把续保杀入5000价位"</td></tr>
+</table>
+</div>
+
+<h3>4.3 "我的违章会不会影响保费"——完整链路</h3>
+<div class="card">
+<p><b>会，但传导路径是"个人"而不是"车"：</b></p>
+<ol>
+  <li>违章记录 → 进入保险公司的<b>交通违法系数 / 风险评分</b>；</li>
+  <li>保险公司后台可见你的<b>年龄、驾龄、里程、出险、违章</b>（群友原话："具体只有保险公司后台可以看到"）；</li>
+  <li>报价时自动上浮；<b>违章 2 次的报价可能高于出险车</b>。</li>
+</ol>
+<p><b>但要注意两个边界：</b></p>
+<ul>
+  <li>"扣分 ≠ 一定涨保费"（群内共识）：<b>交强险</b>与<b>商业险</b>规则不同，轻微违章（如首违警告、罚款 0 元记 0 分）通常不进入系数；</li>
+  <li>交强险与商业险<b>独立浮动</b>："交强险出过一次，你的交强险就会涨 100，商业险不会涨会便宜"（开攻城狮的P7-702银）。</li>
+</ul>
+</div>
+
+<h3>4.4 这款车保费偏贵的原因归纳</h3>
+<div class="card">
+<ol>
+  <li><b>车价基数大。</b>702 版指导价 21.98 万、四驱 750 更高、鹏翼版 30 万档。车损险保额直接跟着车价走，
+      实测同一批报价中车损险一项就占商业险的 <b>59%</b>（3,490 / 5,897）。</li>
+  <li><b>零整比与维修单价高。</b>新势力车型配件贵、必须走 4S，群体共识"后灯保护后保险杠"——
+      群友调侃这款车"一个门面钣金"的维修单价明显高于合资燃油车。
+      群里出现的定损金额从 1,800、3,600、44,600、6 万一直到全损（19.7 万赔付）。</li>
+  <li><b>保险公司给的风险等级高。</b>业务员原话："小鹏和小米一样危险指数最高"。
+      这直接抬高<b>自主定价系数</b>，是"同价位车型、这款车报价更高"的官方解释。</li>
+  <li><b>车主群体特征。</b>车友会成员多为新车首批车主、年轻驾驶者、辅助驾驶使用强度高
+      （群内大量 NGP/智驾讨论，甚至出现"小p直接给我闯红灯了"），
+      按年龄/驾龄/里程维度整体处于费率偏高的区间。</li>
+  <li><b>新车首年本就无折扣。</b>按 §2.5 规则，新保 = 恢复原价，没有任何 NCD 优惠，
+      所以首年普遍落在 6,900～9,300 元；第二年无出险才进入 8 折区间。</li>
+</ol>
+</div>
+
+<h2 id="advice">五、给车主的实操建议</h2>
+<div class="card">
+<ol>
+  <li><b>事故后先定损，再用 2000 元划线。</b>定损 ≤2000 走交强或自费；明显超过 2000 果断走商业险，
+      因为一次出险的隐性成本（约 880～2,200 元）低于自费修车差额时就不划算。</li>
+  <li><b>小磕碰不要动保险。</b>群里多数人的做法是攒着，等对方全责时一起修。</li>
+  <li><b>连续无出险的价值被低估了。</b>连续 4 年 0 赔可到 5 折；一年出一次就掉到原价，
+      长期看差异远超单次维修费。</li>
+  <li><b>违章比出险更值得警惕。</b>清理历史违章、避免多次违章，可能比省一次出险更有效地压低报价。</li>
+  <li><b>续保前一定多比价。</b>同车同保额不同公司可差近千元；问清返点（5%～15%）与赠送项；
+      注意"三者 300 万可能比 400 万更贵"这类反常报价。</li>
+  <li><b>别在网上盲投。</b>务必确认保单里有<b>机动车损失保险</b>，否则交强险不赔自己的车。</li>
+  <li><b>必加的附加项：外部电网故障损失险。</b>群内公认性价比最高（约 86～120 元），
+      免费的道路救援、安全检测、代为驾驶、代为送检也要确认是否包含。</li>
+  <li><b>"焕新险"属于独立产品，不算车险。</b>群内价格 3,988 / 4,800 / 8,300 元不等，
+      作用是补偿折旧（全损时"车损险赔付 + 焕新补偿"可以基本覆盖新车价），
+      适合长期持有、按指导价买车的车主。</li>
+</ol>
+</div>
+
+<h2 id="sources">附录：数据来源与方法</h2>
+<div class="card">
+<p><b>数据源：</b>「杭州THE_NEXT_P7车友会」两份聊天记录导出文件
+（<code>杭州THE_NEXT_P7车友会.html</code> 2025-11-25~2026-08-29；
+<code>杭州THE_NEXT_P7车友会(1).html</code> 2026-08-30~2026-10-09），
+合计约 17.7 万条消息。</p>
+<p><b>图片还原：</b>记录中的图片均以微信加密 <code>.dat</code> 存储，本次已全部解密还原
+（16,028 张，含 5,094 张微信私有 wxgf 格式转码为 JPEG），
+通过「消息引用路径 ↔ 解密图片尾部字节指纹」匹配建立映射，
+再对保险相关图片逐张做视觉识别提取文字。</p>
+<p><b>筛选口径：</b>以「保险 / 保费 / 商业险 / 交强险 / 出险 / 理赔 / 定损 / 违章 / 罚款 / 扣分 /
+超速 / 闯红灯 / 三者 / 车损 / 续保 / 保单 / 报价」等 20 个关键词召回 2.8 万条，
+再人工复核出 126 张强相关图片与 372 条续保期核心对话。</p>
+<p><b>局限：</b>①所有金额为个人实际成交或口头报价，含地区、渠道、返点差异，不代表官方费率；
+②部分报价单截图仅有缩略图（微信未下载原图），分辨率受限；
+③群聊内容为自然对话，存在记忆偏差与转述误差，涉及法规的表述请以官方为准。</p>
+</div>
+
+<footer><a class="related-link" href="stories/">群侠录 · 马德轩小传 <span aria-hidden="true">↗</span></a><br>
+本报告由群聊记录归纳整理，仅供群友内部参考，不构成投保建议。
+涉及具体个人的昵称、车牌、保单信息均来自群内公开讨论，请勿外传。
+</footer>
+
+</main></body></html>

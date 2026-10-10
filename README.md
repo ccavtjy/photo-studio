@@ -1,5 +1,7 @@
-# 马德轩小传 · 杭州群侠录
+# 杭州 P7 车友会
 
-当前公共页面：[马德轩小传](https://ccavtjy.github.io/photo-studio/)。
+主页：[P7 车友会保险调研报告](https://ccavtjy.github.io/photo-studio/)。
 
-原照片工坊的公共入口暂时隐藏，照片及历史记录保留在本机。本仓库当前只托管这份独立静态页面。
+二级入口：[群侠录](https://ccavtjy.github.io/photo-studio/stories/) → [马德轩小传](https://ccavtjy.github.io/photo-studio/stories/madexuan/)。
+
+照片项目的公网入口继续隐藏，本地照片与历史记录保留。
